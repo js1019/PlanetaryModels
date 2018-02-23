@@ -7,10 +7,10 @@ Here are three packages that are used for model building.
 3. a MATLAB script for vtk users by Shawn Walker
 
 
-If you need to compute the gravity field, please compile 
+If you need to compute the gravitational field, please compile 
 stfmmlib3d-1.2: 
 
-for a linux machine, please do
+For a linux machine, please do
 
 module load matlab
 
