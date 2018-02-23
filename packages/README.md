@@ -20,4 +20,4 @@ make mwrap
 
 make mex-matlab 
 
-You then can call it in the MATLAB scripts. 
+You can then call it in the MATLAB scripts. 
