@@ -1,0 +1,73 @@
+#
+#  Generate Matlab/Octave MEX files
+#
+#  gfortran > 4.4.0 is strongly recommended
+#
+
+PROJECT = stfmm3d_r2012a
+MEX_GATEWAY = $(PROJECT)
+
+
+###TARGET=octave-linux
+TARGET=octave-linux-openmp
+###TARGET=matlab-linux-a64
+###TARGET=matlab-linux-a64-openmp
+###TARGET=matlab-maci
+###TARGET=matlab-maci-openmp
+###TARGET=matlab-windows-w32
+###TARGET=matlab-windows-w32-openmp
+###TARGET=matlab-windows-w64
+###TARGET=matlab-windows-w64-openmp
+
+include mwrap.inc
+
+
+.f.$(OBJSUF):
+	$(MEX_FC) $(MEX_FLAGS) -c $(FFLAGS) $<
+
+.c.$(OBJSUF):
+	$(MEX_CC) $(MEX_FLAGS) -c $(CFLAGS) $<
+
+.SUFFIXES: .$(OBJSUF) .f .c
+
+
+# SOURCE FILE LIST
+#
+vpath %.f .:../src
+
+
+FSRCS = \
+     stfmm3dpart.f sthfmm3dpart.f \
+     st3green.f st3routs.f \
+     lfmm3dparthess_tf.f lfmm3dparthess.f \
+     lfmm3drouts.f \
+     d3tstrcr.f d3mtreeplot.f  \
+     prini.f l3dterms.f laprouts3d.f l3dtrans.f \
+     prinm.f yrecursion.f \
+     legeexps.f rotviarecur3.f \
+     lfmm3dpartquad.f 
+
+
+#
+# object files list
+OBJS    = $(FSRCS:.f=.$(OBJSUF)) 
+#
+
+all: $(OBJS) 
+	$(MW) $(MWFLAGS) $(MEX_GATEWAY) -mb $(PROJECT).mw
+	$(MW) $(MWFLAGS) $(MEX_GATEWAY) -c $(MEX_GATEWAY).c $(PROJECT).mw
+	$(MEX) -v $(MEX_FLAGS) $(MEX_LINK) $(MEX_GATEWAY).c $(OBJS) $(MEX_LIBS)
+
+doc:
+	$(MW) $(MWFLAGS) $(MEX_GATEWAY) -mb $(PROJECT).mw
+
+#
+clean: 
+	rm -f $(OBJS)
+# 
+list: $(FSRCS)
+	echo $^
+#
+distclean: 
+	rm -f $(OBJS) int2 fort.* *.o
+

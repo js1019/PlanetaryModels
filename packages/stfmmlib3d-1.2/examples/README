@@ -1,0 +1,80 @@
+Stokes FMMs in R^3
+==================
+
+stfmm3dpart:
+        make -f stfmm3dpart.make -j4
+
+lfmm3dpartquad:
+        make -f lfmm3dpartquad.make -j4
+
+st3green:
+        make -f st3green.make -j4
+
+
+
+stfmm3dpart-openmp:
+        make -f stfmm3dpart.make -j4 HOST=linux-gfortran-openmp
+
+lfmm3dpartquad-openmp:
+        make -f lfmm3dpartquad.make -j4 HOST=linux-gfortran-openmp
+
+
+c
+c     \delta u = \grad p, div u = 0, mu = 1.
+c
+c     Free space Stokes Green's functions:
+c
+c       ifsingle=1, stokeslet, f = sigma_sl
+c       u_i = 1/2 [\delta_ij 1/r + r_i r_j / r^3] f_j
+c       p = [r_j / r^3] f_j
+c
+c       ifdouble=1, double layer stresslet (type 1), g = sigma_dl, n = sigma_dv
+c       u_i = [3 r_i r_j r_k / r^5] n_k g_j
+c       p = 2 [-n_j g_j / r^3 + 3 r_k n_k r_j g_j / r^5 ]
+c
+c       ifdouble=2, symmetric stresslet (type 2), g = sigma_dl, n = sigma_dv
+c       u_i = [-r_i /r^3] n_j g_j + [3 r_i r_j r_k / r^5] n_k g_j
+c       p = 2 [-n_j g_j / r^3 + 3 r_k n_k r_j g_j / r^5 ]
+c
+c       ifdouble=3, rotlet, g = sigma_dl, n = sigma_dv
+c       u_i = [r_j n_j /r^3] g_i - [r_j g_j/ r^3] n_i
+c       p = 0
+c
+c       ifdouble=4, doublet = symmetric stresslet (type 2) + rotlet, 
+c                   g = sigma_dl, n = sigma_dv
+c       u_i = [-r_i /r^3] n_j g_j + [3 r_i r_j r_k / r^5] n_k g_j 
+c             + [r_j n_j /r^3] g_i - [r_j g_j/ r^3] n_i
+c       p = 2 [-n_j g_j / r^3 + 3 r_k n_k r_j g_j / r^5 ]
+c
+c     without the (1/4 pi) scaling.
+c
+
+
+
+c     
+c     \delta u = 0
+c
+c     Free space Stokes Green's functions:
+c
+c     Laplace potentials, fields, and hessians 
+c     due to point charges,dipoles, and quadrupoles.  
+c
+c     pot = charge / r + 
+c           dipstr*  (dipvec(1)*U_x + dipvec(2)*U_y + dipvec(3)*U_z) +
+c           quadstr* (quadvec(1)*V_xx + quadvec(2)*V_yy + quadvec(3)*V_zz+
+c                     quadvec(4)*V_xy + quadvec(5)*V_xz + quadvec(6)*V_yz)
+c
+c     fld = -grad(pot)
+c     hess = (potxx,potyy,potzz,potxy,potxz,potyz)
+c
+c     U_x = dx/r^3, U_y = dy/r^3, U_z = dz/r^3
+c
+c     V_xx = (-1/r^3 + 3*dx**2/r^5)
+c     V_xy = 3*dx*dy/r^5
+c     V_xz = 3*dx*dz/r^5
+c     V_yy = (-1/r^3 + 3*dy**2/r^5)
+c     V_yz = 3*dy*dz/r^5
+c     V_zz = (-1/r^3 + 3*dz**2/r^5)
+c
+c     without the (1/4 pi) scaling.
+c

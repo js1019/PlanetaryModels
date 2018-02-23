@@ -1,0 +1,19 @@
+function [traction]=st3dstress2traction(stress,normal)
+% traction vector, a.k.a stress vector, a.k.a surface force
+%
+% traction = stress \cdot normal
+
+nsource = size(stress,3);
+
+
+traction = zeros(3,nsource);
+traction(1,:) = squeeze(stress(1,1,:))' .* normal(1,:)+... 
+                squeeze(stress(1,2,:))' .* normal(2,:)+... 
+                squeeze(stress(1,3,:))' .* normal(3,:);
+traction(2,:) = squeeze(stress(2,1,:))' .* normal(1,:)+... 
+                squeeze(stress(2,2,:))' .* normal(2,:)+... 
+                squeeze(stress(2,3,:))' .* normal(3,:);
+traction(3,:) = squeeze(stress(3,1,:))' .* normal(1,:)+... 
+                squeeze(stress(3,2,:))' .* normal(2,:)+... 
+                squeeze(stress(3,3,:))' .* normal(3,:);
+
