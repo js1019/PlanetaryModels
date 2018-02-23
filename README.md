@@ -13,7 +13,7 @@ If you use a linux node, you may follow the README.md under ./package
 
 This repository uses four different packages: 
 
-1.TetGen by Hang Si
+1. TetGen by Hang Si
 
 2. distmesh by Per-Olof Persson
 
@@ -21,5 +21,5 @@ This repository uses four different packages:
 
 4. a MATLAB script for vtk users by Shawn Walker
 
-I push most of the original information under different folders 
+I put most of the original materials under different folders 
 with some minor changes for this application.
