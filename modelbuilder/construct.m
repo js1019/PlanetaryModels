@@ -1,6 +1,6 @@
 function [x,y,z,link] = construct(meshname,N)
 
-[p,tet,pt,at]=read_mesh3d(meshname);
+[p,tet,~,~]=read_mesh3d(meshname);
 
 
 nodal=load('porder2nodal.mat','porder');

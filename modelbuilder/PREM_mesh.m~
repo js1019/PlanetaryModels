@@ -22,7 +22,7 @@ load ../unitspheres/data/Sph15k.mat
 p2 = p*R2; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-load ../unitspheres/data/Sph6k.mat
+load ../unitspheres/data/Sph2.mat
 p3 = p*R3; 
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 

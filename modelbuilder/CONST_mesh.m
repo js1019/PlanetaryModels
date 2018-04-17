@@ -2,7 +2,7 @@
 clear all; clc;
  
 %fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
-fmesh  = '/jia/PNM/CONST/CONST3k/CONST_1L_3k_p1';
+fmesh  = '/jia/PNM/CONST/CONST3k/CONST_1L_3k';
 %tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
 tetgen = '../tetgen1.5.0/tetgen';
 tic
