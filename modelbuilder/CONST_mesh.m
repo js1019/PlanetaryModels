@@ -1,8 +1,10 @@
 % build up an earth model
 clear all; clc;
  
-fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
-tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
+%fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
+fmesh  = '/jia/PNM/CONST/CONST3k/CONST_1L_3k_p1';
+%tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
+tetgen = '../tetgen1.5.0/tetgen';
 tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
@@ -11,7 +13,7 @@ load ../deal_prem/prem3L_noocean.mat
 R1 = RD(1,1); 
 
 % load unit spheres
-load ../unitspheres/data/Sph3077k.mat
+load ../unitspheres/data/Sph392.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
@@ -25,6 +27,7 @@ tin(istart:iend,:) = t1;
 trisurf2poly(fmesh,pin,tin);
 toc 
 % generate the mesh
+a = 5e8; %392 3k
 %a = 3e8; %392 5k 
 %a = 1.5e8; % 956 10k
 %a = 2e6; % 42k 1M
@@ -36,10 +39,10 @@ toc
 %a = 6.5e4; % 1047k 32M
 %a = 3.2e4; % 1507k 64M
 %a = 1.6e4; % 2353k 128M
-a = 8.0e3; % 3077k 256M
+%a = 8.0e3; % 3077k 256M
 unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
 toc
-[pout,tout,~,~] = read_mesh3d([fmesh,'.1']);
+[pout,tout,~,~,neigh] = read_mesh3d([fmesh,'.1']);
 
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 toc

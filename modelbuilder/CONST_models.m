@@ -18,6 +18,8 @@ accry = 'float64';
 %pNp = (pOrder+1)*(pOrder+2)*(pOrder+3)/6;
 %[x,y,z,tet] = construct(fname,pOrder);
 
+
+if 0
 vp  = zeros(size(tout,2),size(tout,1)); 
 vp(:) = 10.0;
 fid=fopen(fvp,'w');
@@ -41,7 +43,7 @@ fclose(fid);
 clear rho
 
 toc
-if 0
+
 % setup filename
 filename = fvtk;
 data_title = 'CONST';
