@@ -9,13 +9,8 @@ tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
 
-fhed = [fmesh,'_mesh.header'];
 fele = [fmesh,'_ele.dat'];
-fngh = [fmesh,'_neigh.dat'];
-fnde = [fmesh,'_node.dat'];
-
-pOrder  = 1;
-
+f
 % radius 
 R1 = RD(1,1); 
 
@@ -51,19 +46,5 @@ unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
 toc
 [pout,tout,~,~,neigh] = read_mesh3d([fmesh,'.1']);
 
-dh =[size(tout,1) size(pout,1)];
-fid = fopen(fhed,'w');
-fprintf(fid,'%d %d',dh);
-
-fid=fopen(fele,'w');
-fwrite(fid,tout','uint');
-fid=fopen(fngh,'w');
-fwrite(fid,neigh','uint');
-fid=fopen(fnde,'w');
-fwrite(fid,pout','double');
-
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 toc
-size(tout,1)
-
-run CONST_models

@@ -1,7 +1,7 @@
 % create the model files 
 fname = [fmesh,'.1']; 
 %tic
-pOrder  = 2;
+%pOrder  = 2;
 
 fmid    = ['_pod_',int2str(pOrder),'_'];
 % true model filenames

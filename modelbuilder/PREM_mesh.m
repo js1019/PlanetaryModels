@@ -2,7 +2,7 @@
 clear all; clc;
  
 %fmesh = '/local/js116/NM_models/Earth/models/PREM128M/prem_3L_128M';
-fmesh  = '/jia/PNM/PREM/PREM1M/prem_3L_1M';
+fmesh  = '/jia/PNM/PREM/PREM3k/prem_3L_3k';
 %tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
 tetgen = '../tetgen1.5.0/tetgen';
@@ -10,19 +10,27 @@ tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
 
+fhed = [fmesh,'_mesh.header'];
+fele = [fmesh,'_ele.dat'];
+fngh = [fmesh,'_neigh.dat'];
+fnde = [fmesh,'_node.dat'];
+
+pOrder  = 2;
+
+
 % radius 
 R1 = RD(1,1); R2 = RD(2,1); R3 = RD(3,1);
 
 % load unit spheres
-load ../unitspheres/data/Sph42k.mat
+load ../unitspheres/data/Sph392.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
-load ../unitspheres/data/Sph15k.mat
+load ../unitspheres/data/Sph260.mat
 p2 = p*R2; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-load ../unitspheres/data/Sph6k.mat
+load ../unitspheres/data/Sph260.mat
 p3 = p*R3; 
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
@@ -45,10 +53,10 @@ tin(istart:iend,:) = t3;
 trisurf2poly(fmesh,pin,tin);
 toc 
 % generate the mesh
-%a = 8e10; % 396 3k
+a = 8e10; % 396 3k
 %a = 4e10; % 3k6 20k
 %a = 6e7; % 15k 100k
-a = 2e6; % 42k 1M
+%a = 2e6; % 42k 1M
 %a = 1.15e6; % 94k 2M
 %a = 5.8e5; % 167k 4M
 %a = 3.1e5; % 377k 8M
@@ -62,10 +70,22 @@ a = 2e6; % 42k 1M
 %a = 3.0e3; % 3077k 690M
 unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
 toc
-[pout,tout,~,at] = read_mesh3d([fmesh,'.1']);
-toc
+[pout,tout,~,at,neigh] = read_mesh3d([fmesh,'.1']);
+
+dh =[size(tout,1) size(pout,1)];
+fid = fopen(fhed,'w');
+fprintf(fid,'%d %d',dh);
+
+fid=fopen(fele,'w');
+fwrite(fid,tout','uint');
+fid=fopen(fngh,'w');
+fwrite(fid,neigh','uint');
+fid=fopen(fnde,'w');
+fwrite(fid,pout','double');
+
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 size(tout)
 toc
 
-%run PREM_models
+
+run PREM_models

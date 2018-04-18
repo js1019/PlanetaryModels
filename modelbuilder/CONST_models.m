@@ -1,7 +1,7 @@
 % create the model files 
 fname = [fmesh,'.1']; 
 tic
-pOrder  = 1;
+
 
 fmid    = ['_pod_',int2str(pOrder),'_'];
 % true model filenames
@@ -20,7 +20,7 @@ pNp = (pOrder+1)*(pOrder+2)*(pOrder+3)/6;
 [x,y,z,tet] = construct(fname,pOrder);
 
 
-if 1
+
 vp0  = zeros(pNp,size(tet,1)); 
 vp0(:) = 10.000;
 fid=fopen(fvp,'w');
@@ -47,7 +47,7 @@ rho = rho0(tet');
 %clear rho
 
 toc
-
+if 1
 % setup filename
 filename = fvtk;
 data_title = 'CONST';
