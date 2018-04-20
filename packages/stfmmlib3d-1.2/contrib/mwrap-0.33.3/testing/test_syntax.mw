@@ -1,7 +1,0 @@
-
-function badmojo
-# double z = sumpair(double x)
-// Missing semicolon should result in error
-// Another line just to double check lines
-# double z = sumpair(double x);
-# double z = sumpair(double x)

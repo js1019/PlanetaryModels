@@ -8,7 +8,7 @@ Here are three packages that are used for model building.
 
 
 If you need to compute the gravitational field, please compile 
-stfmmlib3d-1.2: 
+fmmlib3d-1.2: 
 
 For a linux machine, please do
 
