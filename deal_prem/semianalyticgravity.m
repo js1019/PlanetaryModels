@@ -1,7 +1,7 @@
 % calculate gravity
 clear all; clc;
 load prem3L_noocean.mat
-G = 6.674*10^-5; % gravitational constant
+G = 6.6723*10^-5; % gravitational constant
 
 dsy = MI(:,2); 
 RI = MI(:,1); 
@@ -24,6 +24,6 @@ for i = 2:l
 end
 
 %phi = phi - mas/RI(1);
-plot(RI,G*phi,'*')
-
+%plot(RI,G*phi,'*')
+plot(RI,G*gref,'+');
 clear i j l 
