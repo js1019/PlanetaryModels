@@ -1,8 +1,10 @@
 % construct the gravity fields
 clear all; clc; tic
-addpath('../packages/stfmmlib3d-1.2/matlab/');
+addpath('../packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
-fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
+%fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
+fmesh = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
+
 
 scaling = 6.371*10^3;
 
@@ -18,7 +20,7 @@ fgfld = [fname,fmid,'potential_accceleration_',ftail];
 fvtk = [fname,fmid,'gravity.vtk'];
 
 accry = 'float64';
-G = 6.674*10^-5; % gravitational constant
+G = 6.6723*10^-5; % gravitational constant
 
 Ne = size(tout,1); pNp = (pOrder+1)*(pOrder+2)*(pOrder+3)/6;
 
@@ -80,10 +82,14 @@ U.ier
 if (max(gnrm(:))>1.E-5) 
 gfld = -real(U.fldtarg(:,tout'))*G;
 gpot = -real(U.pottarg(:))*G;
+
+if 0
 % save the data
 fid=fopen(fgfld,'w');
 fwrite(fid,gfld',accry);
 fclose(fid);
+end 
+
 
 % visual
 filename = fvtk;

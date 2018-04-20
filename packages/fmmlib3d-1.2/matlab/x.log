@@ -1,0 +1,20 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=mex 2011.12.10)  19 MAR 2012 17:29
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ARCH=maci64 -v fmm3d_r2012a.c lfmm3dtria.o hfmm3dtria.o hfmm3dpart.o lfmm3dpa
+rt.o lfmm3drouts.o hfmm3drouts.o d3tstrcr.o d3mtreeplot.o h3dterms.o helmrouts3
+d.o h3dtrans.o l3dterms.o laprouts3d.o l3dtrans.o triahquad.o triagauc.o prini.
+o prinm.o yrecursion.o projections.o triasymq.o l3dtrirouts.o h3dtrirouts.o tri
+quadflatlib.o trilib.o rotviarecur3.o rotproj.o dfft.o cdjseval3d.o legeexps.o 
+-lgfortran -lgomp -lm
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/x.tex
+! Interruption.
+<to be read again> 
+                   \immediate 
+<everyjob> \immediate 
+                      \write 16{This is MeX  Version 1.05  18 XII 1993  (B. ...
+l.1 
+    %%
+? x
+No pages of output.
