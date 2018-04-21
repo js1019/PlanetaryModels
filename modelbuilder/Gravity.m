@@ -1,10 +1,10 @@
 % construct the gravity fields
 clear all; clc; tic
-addpath('../packages/fmmlib3d-1.2/matlab/');
+addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-%fmesh = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
-fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
+fmesh = '/jia/PNM/CONST/trueG/CONST640k/CONST_1L_640k';
+%fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
 
 pOrder  = 2;
 
@@ -18,7 +18,7 @@ fmid    = ['_pod_',int2str(pOrder),'_'];
 fname = [fmesh,'.1']; 
 ftail   = 'true.dat';
 frho    = [fname,'_rho',fmid,ftail];
-fgfld = [fname,fmid,'potential_accceleration_',ftail];
+fgfld = [fname,fmid,'potential_acceleration_',ftail];
 fvtk = [fname,fmid,'gravity.vtk'];
 
 accry = 'float64';
@@ -129,7 +129,7 @@ fwrite(fid,gfld1,accry);
 fclose(fid);
 end 
 
-if (max(gnrm(:))>1.E-5) 
+if (max(gnrm(:))>1.E-5 && 0) 
 gfld = -real(U.fldtarg(:,tout'))*G;
 gpot = -real(U.pottarg(:))*G;
 % visual
@@ -168,5 +168,5 @@ stat = vtk_write_tetrahedral_grid_and_data(filename,data_title,pnew0/scaling,...
     tet,data_struct,flipped);
 toc
 
-end
+
 
