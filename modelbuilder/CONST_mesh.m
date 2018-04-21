@@ -4,7 +4,7 @@ clear all; clc;
 %fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
 fmesh  = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
 %tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
-tetgen = '../tetgen1.5.0/tetgen';
+tetgen = '../packages/tetgen1.5.0/tetgen';
 tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
@@ -14,7 +14,7 @@ fele = [fmesh,'_ele.dat'];
 fngh = [fmesh,'_neigh.dat'];
 fnde = [fmesh,'_node.dat'];
 
-pOrder  = 1;
+pOrder  = 2;
 
 % radius 
 R1 = RD(1,1); 

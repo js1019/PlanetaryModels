@@ -4,7 +4,14 @@ load prem3L_noocean.mat
 G = 6.6723*10^-5; % gravitational constant
 
 dsy = MI(:,2); 
-RI = MI(:,1); 
+RI  = MI(:,1); 
+
+for i = 2:length(MI(:,1))
+    if (abs(MI(i-1,1)-MI(i,1))<1.E-3)
+       %j = j + 1;
+       RI(i) = RI(i) + 1.E-4; 
+    end
+end
 
 phi = zeros(size(RI)); gref = zeros(size(RI));
 
@@ -25,5 +32,5 @@ end
 
 %phi = phi - mas/RI(1);
 %plot(RI,G*phi,'*')
-plot(RI,G*gref,'+');
+%plot(RI,G*gref,'+');
 clear i j l 

@@ -2,10 +2,10 @@
 clear all; clc;
  
 %fmesh = '/local/js116/NM_models/Earth/models/PREM128M/prem_3L_128M';
-fmesh  = '/jia/PNM/PREM/PREM3k/prem_3L_3k';
+fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
 %tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
-tetgen = '../tetgen1.5.0/tetgen';
+tetgen = '../packages/tetgen1.5.0/tetgen';
 tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
