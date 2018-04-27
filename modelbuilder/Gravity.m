@@ -3,8 +3,11 @@ clear all; clc; tic
 addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-fmesh = '/jia/PNM/CONST/trueG/CONST640k/CONST_1L_640k';
+fmesh = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
+
+load ../deal_prem/CONST_gravity.mat
+
 
 pOrder  = 2;
 
@@ -98,14 +101,16 @@ min(real(U.pottarg(:))*G)
 
 U.ier
 
+gfld0 = - real(U.fldtarg(:,tout')')*G;
 
 % semi-analytic solutions
-load ../deal_prem/prem3L_noocean_gravity.mat
 gnrm0 = interp1(RI,gref*G,rnrm,'pchip');
 
 rnrm1 = sqrt(sum(pnew0'.*pnew0')); 
 gnrm1 = interp1(RI,gref*G,rnrm1,'pchip');
 
+%plot(rnrm,gnrm0,'o'); hold on;
+%plot(rnrm1,gnrm1,'+')
 
 
 gfld1 = zeros(size(pnew0));
@@ -114,6 +119,9 @@ for i = 1:3
 end
 
 gfld1t = gfld1';
+
+%resg = gfld1 - gfld0;
+%norm(resg(:))/norm(gfld1(:))
 
 if 0 % FMM
 % save the data

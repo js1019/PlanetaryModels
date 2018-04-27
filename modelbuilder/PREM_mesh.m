@@ -10,10 +10,10 @@ tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
 
-fhed = [fmesh,'_mesh.header'];
-fele = [fmesh,'_ele.dat'];
-fngh = [fmesh,'_neigh.dat'];
-fnde = [fmesh,'_node.dat'];
+fhed = [fmesh,'.1_mesh.header'];
+fele = [fmesh,'.1_ele.dat'];
+fngh = [fmesh,'.1_neigh.dat'];
+fnde = [fmesh,'.1_node.dat'];
 
 pOrder  = 2;
 
@@ -77,11 +77,11 @@ fid = fopen(fhed,'w');
 fprintf(fid,'%d %d',dh);
 
 fid=fopen(fele,'w');
-fwrite(fid,tout','uint');
+fwrite(fid,tout','int');
 fid=fopen(fngh,'w');
-fwrite(fid,neigh','uint');
+fwrite(fid,neigh','int');
 fid=fopen(fnde,'w');
-fwrite(fid,pout','double');
+fwrite(fid,pout','float64');
 
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 size(tout)

@@ -2,7 +2,7 @@
 clear all; clc;
  
 %fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
-fmesh  = '/jia/PNM/CONST/trueG/CONST640k/CONST_1L_640k';
+fmesh  = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
 tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
 %tetgen = '../packages/tetgen1.5.0/tetgen';
 
@@ -10,10 +10,10 @@ tic
 % load radial information
 load ../deal_prem/prem3L_noocean.mat
 
-fhed = [fmesh,'_mesh.header'];
-fele = [fmesh,'_ele.dat'];
-fngh = [fmesh,'_neigh.dat'];
-fnde = [fmesh,'_node.dat'];
+fhed = [fmesh,'.1_mesh.header'];
+fele = [fmesh,'.1_ele.dat'];
+fngh = [fmesh,'.1_neigh.dat'];
+fnde = [fmesh,'.1_node.dat'];
 
 pOrder  = 1;
 
@@ -21,7 +21,7 @@ pOrder  = 1;
 R1 = RD(1,1); 
 
 % load unit spheres
-load ../unitspheres/data/Sph42k.mat
+load ../unitspheres/data/Sph392.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
@@ -35,7 +35,7 @@ tin(istart:iend,:) = t1;
 trisurf2poly(fmesh,pin,tin);
 toc 
 % generate the mesh
-%a = 5e8; %392 3k
+a = 5e8; %392 3k
 %a = 3e8; %392 5k 
 %a = 1.5e8; % 956 10k
 %a = 9e7; % 956 20k 
@@ -43,7 +43,7 @@ toc
 %a = 2.5e7; % 6k 80k 
 %a = 1.4e7; % 15k 160k 
 %a = 6e6; % 15k 320k 
-a = 3.3e6; % 42k 640k 
+%a = 3.3e6; % 42k 640k 
 %a = 2e6; % 42k 1M
 %a = 1e6; % 94k 2M
 %a = 5e5; % 167k 4M 
@@ -63,11 +63,11 @@ fid = fopen(fhed,'w');
 fprintf(fid,'%d %d',dh);
 
 fid=fopen(fele,'w');
-fwrite(fid,tout','uint');
+fwrite(fid,tout','int');
 fid=fopen(fngh,'w');
-fwrite(fid,neigh','uint');
+fwrite(fid,neigh','int');
 fid=fopen(fnde,'w');
-fwrite(fid,pout','double');
+fwrite(fid,pout','float64');
 
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 toc
