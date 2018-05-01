@@ -8,8 +8,7 @@ fmesh = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
 
 load ../deal_prem/CONST_gravity.mat
 
-
-pOrder  = 2;
+pOrder  = 1;
 
 scaling = 6.371*10^3;
 
@@ -133,7 +132,7 @@ end
 if 1 % semi-analytic
 % save the data
 fid=fopen(fgfld,'w');
-fwrite(fid,gfld1,accry);
+fwrite(fid,gfld1',accry); % first 3 directions; pNp, ntet
 fclose(fid);
 end 
 
