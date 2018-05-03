@@ -30,7 +30,8 @@ vp = vp0(tet');
 %clear vp
 
 vs0  = zeros(pNp,size(tet,1)); 
-vs0(:) = 10.000/sqrt(3.0);
+%vs0(:) = 10.000/sqrt(3.0);
+vs0(:) = 5.7735;
 fid=fopen(fvs,'w');
 fwrite(fid,vs0(:),accry);
 
