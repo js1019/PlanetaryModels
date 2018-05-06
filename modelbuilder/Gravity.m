@@ -1,9 +1,9 @@
 % construct the gravity fields
 clear all; clc; tic
-addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
+addpath('../packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
-%fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-fmesh = '/jia/PNM/CONST/FMMG/CONST80k/CONST_1L_80k';
+fmesh = '/pylon5/ac4s8pp/js116/trueG/CONST128M/CONST_1L_128M';
+%fmesh = '/jia/PNM/CONST/FMMG/CONST80k/CONST_1L_80k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM20k/prem_3L_20k';
 
 load ../deal_prem/CONST_gravity.mat
@@ -89,6 +89,7 @@ target = pout';
 
 
 ifpottarg = 1; iffldtarg = 1;
+
 toc 
 [U]=lfmm3dpart(iprec,nsource,source,ifcharge,charge,...
     ifdipole,dipstr,dipvec,ifpot,iffld,ntarget,target,ifpottarg,iffldtarg);
@@ -119,26 +120,26 @@ end
 
 gfld1t = gfld1';
 
-if (pOrder==1)
+if (pOrder==1 && 0)
 resg = gfld1 - gfld0;
 norm(resg(:))/norm(gfld1(:))
 end 
 
-if 1 % FMM
+if 0 % FMM
 % save the data
 fid=fopen(fgfld,'w');
 fwrite(fid,gfld0',accry);
 fclose(fid);
 end 
 
-if 0 % semi-analytic
+if 1 % semi-analytic
 % save the data
 fid=fopen(fgfld,'w');
 fwrite(fid,gfld1',accry); % first 3 directions; pNp, ntet
 fclose(fid);
 end 
 
-if (max(gnrm(:))>1.E-5 && 1) 
+if (max(gnrm(:))>1.E-5 && 0) 
 gfld = -real(U.fldtarg(:,tout'))*G;
 gpot = -real(U.pottarg(:))*G;
 % visual

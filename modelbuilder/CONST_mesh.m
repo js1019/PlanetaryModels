@@ -2,9 +2,10 @@
 clear all; clc;
  
 %fmesh = '/local/js116/NM_models/CONST/models/CONST256M/CONST_1L_256M';
-fmesh  = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
-tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
-%tetgen = '../packages/tetgen1.5.0/tetgen';
+%fmesh  = '/jia/PNM/CONST/trueG/CONST3k/CONST_1L_3k';
+fmesh = '/pylon5/ac4s8pp/js116/trueG/CONST128M/CONST_1L_128M';
+%tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
+tetgen = '../packages/tetgen1.5.0/tetgen';
 
 tic
 % load radial information
@@ -21,7 +22,8 @@ pOrder  = 1;
 R1 = RD(1,1); 
 
 % load unit spheres
-load ../unitspheres/data/Sph392.mat
+load ../unitspheres/data/data/Sph2353k.mat
+
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
@@ -35,7 +37,7 @@ tin(istart:iend,:) = t1;
 trisurf2poly(fmesh,pin,tin);
 toc 
 % generate the mesh
-a = 5e8; %392 3k
+%a = 5e8; %392 3k
 %a = 3e8; %392 5k 
 %a = 1.5e8; % 956 10k
 %a = 9e7; % 956 20k 
@@ -52,7 +54,7 @@ a = 5e8; %392 3k
 %a = 1.3e5; % 589k 16M
 %a = 6.5e4; % 1047k 32M
 %a = 3.2e4; % 1507k 64M
-%a = 1.6e4; % 2353k 128M
+a = 1.6e4; % 2353k 128M
 %a = 8.0e3; % 3077k 256M
 unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
 toc
