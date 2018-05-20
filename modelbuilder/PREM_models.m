@@ -18,9 +18,10 @@ accry = 'float64';
 pNp = (pOrder+1)*(pOrder+2)*(pOrder+3)/6;
 [x,y,z,tet] = construct(fname,pOrder);
 
-vp0  = zeros(pNp,size(tet,1)); 
-vs0  = zeros(pNp,size(tet,1)); 
-rho0 = zeros(pNp,size(tet,1)); 
+
+vp0  = zeros(pNp,size(x,2)); 
+vs0  = zeros(pNp,size(x,2)); 
+rho0 = zeros(pNp,size(x,2)); 
 
 
 for i = 1:nlayer

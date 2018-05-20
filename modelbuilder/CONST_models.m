@@ -21,7 +21,7 @@ pNp = (pOrder+1)*(pOrder+2)*(pOrder+3)/6;
 
 
 
-vp0  = zeros(pNp,size(tet,1)); 
+vp0  = zeros(pNp,size(x,2)); 
 vp0(:) = 10.000;
 fid=fopen(fvp,'w');
 fwrite(fid,vp0(:),accry);
@@ -29,7 +29,7 @@ fwrite(fid,vp0(:),accry);
 vp = vp0(tet');
 %clear vp
 
-vs0  = zeros(pNp,size(tet,1)); 
+vs0  = zeros(pNp,size(x,2)); 
 %vs0(:) = 10.000/sqrt(3.0);
 vs0(:) = 5.7735;
 fid=fopen(fvs,'w');
@@ -38,7 +38,7 @@ fwrite(fid,vs0(:),accry);
 vs = vs0(tet');
 %clear vs
 
-rho0 = zeros(pNp,size(tet,1)); 
+rho0 = zeros(pNp,size(x,2)); 
 rho0(:) = 5.5100;
 fid=fopen(frho,'w');
 fwrite(fid,rho0(:),accry);
