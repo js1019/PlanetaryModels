@@ -3,8 +3,8 @@ clear all; clc; tic
 addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-%fmesh = '/jia/PNM/CONST/FMMG/CONST640k/CONST_1L_640k';
-fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
+%fmesh = '/jia/PNM/CONST/trueG/CONST640k/CONST_1L_640k';
+fmesh  = '/jia/PNM/PREM/trueG/PREM8M/prem_3L_8M';
 
 %load ../deal_prem/CONST_gravity.mat
 load ../deal_prem/prem3L_noocean_gravity.mat
@@ -91,8 +91,10 @@ target = pout';
 
 ifpottarg = 1; iffldtarg = 1;
 toc 
+if (nsource+ntarget < 16e6)
 [U]=lfmm3dpart(iprec,nsource,source,ifcharge,charge,...
     ifdipole,dipstr,dipvec,ifpot,iffld,ntarget,target,ifpottarg,iffldtarg);
+
 toc
 rnrm = sqrt(sum(target.*target));
 gnrm = sqrt(sum(real(U.fldtarg).*real(U.fldtarg)))*G;
@@ -105,7 +107,7 @@ gfld0 = - real(U.fldtarg(:,tout')')*G;
 
 % semi-analytic solutions
 gnrm0 = interp1(RI,gref*G,rnrm,'pchip');
-
+end
 rnrm1 = sqrt(sum(pnew0'.*pnew0')); 
 gnrm1 = interp1(RI,gref*G,rnrm1,'pchip');
 
@@ -137,7 +139,7 @@ fwrite(fid,gfld1',accry); % first 3 directions; pNp, ntet
 fclose(fid);
 end 
 
-if (max(gnrm(:))>1.E-5 && 1) 
+if (saveFMM) 
 gfld = -real(U.fldtarg(:,tout'))*G;
 gpot = -real(U.pottarg(:))*G;
 % visual
