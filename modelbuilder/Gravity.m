@@ -3,12 +3,13 @@ clear all; clc; tic
 addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-%fmesh = '/jia/PNM/CONST/trueG/CONST640k/CONST_1L_640k';
-fmesh  = '/jia/PNM/PREM/trueG/PREM8M/prem_3L_8M';
+%fmesh = '/jia/PNM/CONST/FMMG/CONST3k/CONST_1L_3k';
+fmesh  = '/jia/PNM/PREM/FMMG/PREM5k/prem_3L_5k';
 
 %load ../deal_prem/CONST_gravity.mat
 load ../deal_prem/prem3L_noocean_gravity.mat
-saveFMM = false; 
+%saveFMM = false; 
+saveFMM = true; 
 
 pOrder  = 2;
 
@@ -85,9 +86,10 @@ ifpot = 0; iffld = 0;
 %target(2,:) = reshape(y,ntarget,1);
 %target(3,:) = reshape(z,ntarget,1);
 
-ntarget = size(pout,1); 
-target = pout'; 
-
+%ntarget = size(pout,1); 
+%target = pout'; 
+ntarget = size(pnew0,1); 
+target = pnew0'; 
 
 ifpottarg = 1; iffldtarg = 1;
 toc 
@@ -103,7 +105,7 @@ max(gnrm(:))
 %min(real(U.pottarg(:))*G)
 %U.ier
 
-gfld0 = - real(U.fldtarg(:,tout')')*G;
+gfld0 = - real(U.fldtarg(:,:)')*G;
 
 % semi-analytic solutions
 gnrm0 = interp1(RI,gref*G,rnrm,'pchip');
@@ -140,7 +142,8 @@ fclose(fid);
 end 
 
 if (saveFMM) 
-gfld = -real(U.fldtarg(:,tout'))*G;
+gfld = -real(U.fldtarg(:,tet'))*G;
+%gfld = -real(U.fldtarg(:,tout'))*G;
 gpot = -real(U.pottarg(:))*G;
 % visual
 filename = fvtk;
@@ -162,8 +165,8 @@ flipped = false;
 %pnew = pout(tout',:)/scaling;  
 % write the file
 
-stat = vtk_write_tetrahedral_grid_and_data(filename,data_title,pout/scaling,...
-    tout,data_struct,flipped);
+stat = vtk_write_tetrahedral_grid_and_data(filename,data_title,pnew0/scaling,...
+    tet,data_struct,flipped);
 toc
 end
  
