@@ -4,14 +4,14 @@ addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
 %fmesh = '/jia/PNM/CONST/FMMG/CONST3k/CONST_1L_3k';
-fmesh  = '/jia/PNM/PREM/FMMG/PREM5k/prem_3L_5k';
+fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
 
 %load ../deal_prem/CONST_gravity.mat
 load ../deal_prem/prem3L_noocean_gravity.mat
-%saveFMM = false; 
-saveFMM = true; 
+saveFMM = false; 
+%saveFMM = true; 
 
-pOrder  = 2;
+pOrder  = 1;
 
 scaling = 6.371*10^3;
 
@@ -93,7 +93,7 @@ target = pnew0';
 
 ifpottarg = 1; iffldtarg = 1;
 toc 
-if (nsource+ntarget < 16e6)
+if (nsource+ntarget < 20e6)
 [U]=lfmm3dpart(iprec,nsource,source,ifcharge,charge,...
     ifdipole,dipstr,dipvec,ifpot,iffld,ntarget,target,ifpottarg,iffldtarg);
 
@@ -124,7 +124,7 @@ end
 
 gfld1t = gfld1';
 
-if (pOrder==1)
+if (pOrder==1 && nsource+ntarget < 20e6)
 resg = gfld1 - gfld0;
 norm(resg(:))/norm(gfld1(:))
 end 
