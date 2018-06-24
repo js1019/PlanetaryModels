@@ -64,6 +64,11 @@ eigm00 = eigm0(:,chk);
 eigm1(:,vlist) = eigm00;
 eigm  = eigm1(:,1:nvtx);
 
+
+rad = sqrt(sum(pxyz'.*pxyz'));
+Rcom = sum(eigm.*pxyz')./rad;
+
+
 filename = fvtk;
 data_title = 'eigenmodes';
 % organize data
@@ -72,6 +77,10 @@ data_title = 'eigenmodes';
 data_struct(1).type = 'vector';
 data_struct(1).name = 'modes';
 data_struct(1).data = eigm(:);
+
+data_struct(2).type = 'scalar';
+data_struct(2).name = 'Radial';
+data_struct(2).data = Rcom(:);
 
 flipped = false;
 

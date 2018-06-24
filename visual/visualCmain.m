@@ -7,7 +7,7 @@ fout   = '/jia/PNM/CONST/output/trueG/CONST10k/datan16/';
 fbase  = 'CONST_1L_10k.1';
 fdtail = '0.0000000E+00_1.000000';
 
-JOB = 2; pOrder = 2; nproc = 16; nth = 4; 
+JOB = 2; pOrder = 2; nproc = 16; nth = 8; 
 Radial = 6.371E3;
 
 fmeshorg = [fmesh,fbase];
@@ -35,6 +35,9 @@ eigm0 = reshape(vsol,3,length(vsol)/3);
 eigm1(:,vlist) = eigm0;
 eigm  = eigm1(:,1:nvtx);
 
+rad = sqrt(sum(pxyz'.*pxyz'));
+Rcom = sum(eigm.*pxyz')./rad;
+
 filename = fvtk;
 data_title = 'eigenmodes';
 % organize data
@@ -43,6 +46,11 @@ data_title = 'eigenmodes';
 data_struct(1).type = 'vector';
 data_struct(1).name = 'modes';
 data_struct(1).data = eigm(:);
+
+data_struct(2).type = 'scalar';
+data_struct(2).name = 'Radial';
+data_struct(2).data = Rcom(:);
+
 
 flipped = false;
 
