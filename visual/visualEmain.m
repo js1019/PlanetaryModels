@@ -2,10 +2,10 @@
 clear all;clc;
 addpath('../modelbuilder/'); 
 
-fmesh  = '/jia/PNM/CONST/trueG/CONST10k/';
-fout   = '/jia/PNM/CONST/output/trueG/CONST10k/datan16/';
-fbase  = 'CONST_1L_10k.1';
-fdtail = '0.0000000E+00_1.000000';
+fmesh  = '/jia/PNM/PREM/trueG/PREM10k/';
+fout   = '/jia/PNM/PREM/output/trueG/PREM10k/datan16/';
+fbase  = 'prem_3L_10k.1';
+fdtail = '0.1000000_1.000000';
 
 JOB = 2; pOrder = 2; nproc = 16; nth = 4; 
 Radial = 6.371E3;
@@ -20,6 +20,12 @@ fvtk = [fout,'vtk/',fbase,'_JOB',int2str(JOB),'_pod',int2str(pOrder),...
 fvlist = [fout,fbase,'_pod',int2str(pOrder),...
     '_np',int2str(nproc),'_vlist.dat'];
 
+fvloct = [fout,fbase,'_pod',int2str(pOrder),...
+    '_np',int2str(nproc),'_vloct.dat'];
+
+fvstat = [fout,fbase,'_pod',int2str(pOrder),...
+    '_np',int2str(nproc),'_vstat.dat'];
+
 [pxyz,tet,~,~,~] = read_mesh3d(fmeshorg);
 
 nvtx = size(pxyz,1);
@@ -28,11 +34,34 @@ fid = fopen(fvlist,'r');
 vlist = fread(fid,'int'); 
 fclose(fid);
 
+fid = fopen(fvloct,'r'); 
+vloct = fread(fid,'int'); 
+fclose(fid);
+
+fid = fopen(fvstat,'r'); 
+vstat = fread(fid,'int'); 
+fclose(fid);
+
+
 fid = fopen(fdat,'r');
 vsol = fread(fid,'float64');
 fclose(fid);
+
 eigm0 = reshape(vsol,3,length(vsol)/3);
-eigm1(:,vlist) = eigm0;
+ll = sum(vstat==2 | vstat==5); lsiz = length(vstat);
+chk = true(ll+lsiz,1); k = 0; 
+for i = 1:lsiz
+    if (vstat(i)==2 || vstat(i) == 5) 
+        chk(k+2) = false;
+        k = k + 2;
+    else
+        k = k + 1;
+    end
+end
+eigm00 = eigm0(:,chk);
+
+
+eigm1(:,vlist) = eigm00;
 eigm  = eigm1(:,1:nvtx);
 
 filename = fvtk;
