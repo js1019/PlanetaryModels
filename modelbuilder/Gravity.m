@@ -1,6 +1,6 @@
 % construct the gravity fields
 clear all; clc; tic
-addpath('/home/js116/Documents/GitHub/PNMsG_models/packages/fmmlib3d-1.2/matlab/');
+addpath('../packages/fmmlib3d-1.2/matlab/');
 %fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
 %fmesh = '/jia/PNM/CONST/FMMG/CONST3k/CONST_1L_3k';
