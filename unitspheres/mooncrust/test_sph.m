@@ -1,7 +1,7 @@
 % tests
 clear all; clc; tic;
 addpath('../../packages/distmesh/');
-addpath('./Spherical-Harmonic-Transform/');
+addpath('../../packages/Spherical-Harmonic-Transform/');
 fsvtk = './vtk/Moon08CMI60';
 
 R = 1737.0;

@@ -1,6 +1,6 @@
 clear all; clc;
 addpath('../../packages/distmesh/');
-addpath('./Spherical-Harmonic-Transform/');
+addpath('../../packages/Spherical-Harmonic-Transform/');
 fsvtk = './vtk/MoonICB';
 
 R0 = 1737.; Rc = 1497;
