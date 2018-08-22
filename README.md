@@ -14,6 +14,7 @@ This repository uses four different packages:
 2. distmesh by Per-Olof Persson  
 3. fmmlib3d from Leslie Greengard and Zydrunas Gimbutas  
 4. a MATLAB script for vtk users by Shawn Walker
+5. a spherical harmonic transform library by Archotis Politis
 
 I put most of the original materials under different folders 
 with some minor changes for this application.

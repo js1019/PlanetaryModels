@@ -3,6 +3,7 @@ Here are three packages that are used for model building.
 2. fmmlib3d from Leslie Greengard and Zydrunas Gimbutas  
 3. a MATLAB script for vtk users by Shawn Walker
 4. TetGen by Hang Si
+5. a spherical harmonic transform library by Archotis Politis
 
 If you need to compute the gravitational field, please compile 
 fmmlib3d-1.2:  
