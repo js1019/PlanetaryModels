@@ -1,16 +1,17 @@
 % construct the gravity fields
 clear all; clc; tic
 addpath('../packages/fmmlib3d-1.2/matlab/');
-%fmesh = '/local/js116/NM_models/Earth/models/PREM2M/prem_3L_2M';
-%fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM32M/prem_3L_32M';
-%fmesh = '/jia/PNM/CONST/FMMG/CONST3k/CONST_1L_3k';
-fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
 
-%load ../deal_prem/CONST_gravity.mat
-load ../deal_prem/prem3L_noocean_gravity.mat
-saveFMM = false; 
-%saveFMM = true; 
 
+fmesh = 'output/CONST3k/CONST_1L_3k';
+%fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
+
+load ../radialmodels/CONST_gravity.mat
+%load ../radialmodels/prem3L_noocean_gravity.mat
+%saveFMM = false; 
+saveFMM = true;
+
+% finite element order (choose 1 or 2)
 pOrder  = 1;
 
 scaling = 6.371*10^3;

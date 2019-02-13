@@ -1,22 +1,35 @@
 % build up an earth model
 clear all; clc;
- 
-%fmesh = '/local/js116/NM_models/Earth/models/PREM128M/prem_3L_128M';
-fmesh  = '/jia/PNM/PREM/trueG/PREM3k/prem_3L_3k';
-%tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
+addpath('../modelbuilder/');  
+
+fmesh  = 'output/PREM3k/prem_3L_3k';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
-tetgen = '../packages/tetgen1.5.0/tetgen';
-tic
-% load radial information
-load ../deal_prem/prem3L_noocean.mat
+tetgen = '../packages/tetgen1.5.0/tetgen'; 
 
-fhed = [fmesh,'.1_mesh.header'];
-fele = [fmesh,'.1_ele.dat'];
-fngh = [fmesh,'.1_neigh.dat'];
-fnde = [fmesh,'.1_node.dat'];
-
+% finite element order (choose 1 or 2)
 pOrder  = 2;
 
+% set the value to contral the degrees of freedom
+a = 8e10; % 396 3k
+%a = 4e10; % 3k6 20k
+%a = 6e7; % 15k 100k
+%a = 2e6; % 42k 1M
+%a = 1.15e6; % 94k 2M
+%a = 5.8e5; % 167k 4M
+%a = 3.1e5; % 377k 8M
+%a = 1.5e5; % 589k 16M
+%a = 7.5e4; % 1047k 32M
+%a = 3.6e4; % 1507k 64M
+%a = 1.75e4; % 2353k 128M
+%a = 8.0e3; % 3077k 256M
+%a = 5.0e3; % 3077k 400M
+%a = 4.0e3; % 3077k 512M
+%a = 3.0e3; % 3077k 690M
+
+
+tic
+% load radial information
+load ../radialmodels/prem3L_noocean.mat
 
 % radius 
 R1 = RD(1,1); R2 = RD(2,1); R3 = RD(3,1);
@@ -52,22 +65,13 @@ tin(istart:iend,:) = t3;
 % generate internal surfaces 
 trisurf2poly(fmesh,pin,tin);
 toc 
+
+fhed = [fmesh,'.1_mesh.header'];
+fele = [fmesh,'.1_ele.dat'];
+fngh = [fmesh,'.1_neigh.dat'];
+fnde = [fmesh,'.1_node.dat'];
+
 % generate the mesh
-a = 8e10; % 396 3k
-%a = 4e10; % 3k6 20k
-%a = 6e7; % 15k 100k
-%a = 2e6; % 42k 1M
-%a = 1.15e6; % 94k 2M
-%a = 5.8e5; % 167k 4M
-%a = 3.1e5; % 377k 8M
-%a = 1.5e5; % 589k 16M
-%a = 7.5e4; % 1047k 32M
-%a = 3.6e4; % 1507k 64M
-%a = 1.75e4; % 2353k 128M
-%a = 8.0e3; % 3077k 256M
-%a = 5.0e3; % 3077k 400M
-%a = 4.0e3; % 3077k 512M
-%a = 3.0e3; % 3077k 690M
 unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
 toc
 [pout,tout,~,at,neigh] = read_mesh3d([fmesh,'.1']);
