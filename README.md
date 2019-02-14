@@ -27,9 +27,7 @@ Build your planetary models
 What can you get?  
 -----------------------------------------------------------------
 
-# ![Alt](figs/CMI_94k.png =147x100)
-
-<img src="figs/CMI_94k.png" alt="drawing" width="100" height="147"/>
+<img src="figs/CMI_94k.png" alt="drawing" width="295" height="200"/>
 
 Contact 
 -----------------------------------------------------------------
