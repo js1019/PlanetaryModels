@@ -46,7 +46,7 @@ To design your own models, you may change the settings, including the discontinu
 
 Reference
 -------------------------------------------------------------------
-The repository provides codes to generate planetary models for the 2018 SuperComputing Conference [paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
+The repository provides scripts to generate planetary models for [the SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
 
 ~~~
 @inproceedings{shi2018computing,
