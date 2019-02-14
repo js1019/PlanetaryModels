@@ -5,8 +5,8 @@ as well as its reference gravity.
 
 <img src="figs/moho-mit_combined.png" alt="drawing" width="700" height="243" align="middle"/>
 
-The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity) (Burdick et al. 2017) 
-and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html-beneath-north-america) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
+The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
+and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
 
 How to make it work for you? 
 ----------------------------------------------------------------
