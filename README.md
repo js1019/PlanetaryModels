@@ -12,11 +12,11 @@ and crust 1.0 (Laske et al. 2013). The top left one shows the topography of the 
 How to make it work for you? 
 ----------------------------------------------------------------
 This repository uses several packages:  
-+ TetGen by Hang Si  
-+ distmesh by Per-Olof Persson  
-+ several MATLAB scripts from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'  
-+ fmmlib3d from Leslie Greengard and Zydrunas Gimbutas  
-+ a MATLAB script for vtk users by Shawn Walker
++ [TetGen](http://www.tetgen.org) by Hang Si  
++ [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson  
++ [several MATLAB scripts](https://github.com/tcew/nodal-dg) from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'  
++ [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas  
++ [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker
 
 I put most of the original materials under different folders 
 with some minor changes for this application.
@@ -39,7 +39,7 @@ to obtain the model and its reference gravity. Under demos/PREM, you may also ru
 run PREM_mesh; run Gravity;
 ~~~
 to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
-Here are two animations for [Compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [Shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
+Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 
 To design your own models, you may change the settings, including the different discontinuities and model profiles. 
 
