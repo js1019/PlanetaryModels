@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-This repository provides codes to build a planet model on a tetrahedal mesh,
+This repository provides codes to build a planet model on a tetrahedal mesh
 as well as its reference gravity. 
 
 <img src="figs/moho-mit_combined.png" alt="drawing" width="700" height="243" align="middle"/>
@@ -17,7 +17,7 @@ This repository uses several packages:
 + [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas  
 + [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker
 
-I put most of the original materials under different folders 
+We've put most of the original materials under different folders 
 with some minor changes for this application.
 
 
