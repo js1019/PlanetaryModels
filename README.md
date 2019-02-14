@@ -6,11 +6,11 @@ as well as its reference gravity.
 How to make it work for you? 
 ----------------------------------------------------------------
 This repository uses several packages:  
-1. TetGen by Hang Si  
-2. distmesh by Per-Olof Persson  
-3. several MATLAB scripts from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'  
-4. fmmlib3d from Leslie Greengard and Zydrunas Gimbutas  
-5. a MATLAB script for vtk users by Shawn Walker
++ TetGen by Hang Si  
++ distmesh by Per-Olof Persson  
++ several MATLAB scripts from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'  
++ fmmlib3d from Leslie Greengard and Zydrunas Gimbutas  
++ a MATLAB script for vtk users by Shawn Walker
 
 I put most of the original materials under different folders 
 with some minor changes for this application.
@@ -23,6 +23,10 @@ If you only need to build a tetrahedal mesh, please compile tetgen; if you are a
 Build your planetary models
 -----------------------------------------------------------------
 
+
+What can you get?  
+-----------------------------------------------------------------
+ ![Alt](../CMI_94k.eps)
 
 Contact 
 -----------------------------------------------------------------
