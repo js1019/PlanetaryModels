@@ -27,7 +27,7 @@ Build your planetary models
 What can you get?  
 -----------------------------------------------------------------
 
-<img src="figs/MIT1M_p2_vp.pdf" alt="drawing" width="295" height="200"/>
+<img src="figs/MITtopo4M_vp.png" alt="drawing" width="442" height="300"/>
 
 Contact 
 -----------------------------------------------------------------
