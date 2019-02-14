@@ -1,7 +1,7 @@
 Planetary Model Builder 
 ================================================================
 
-<img src="figs/MITtopo4M_vp.png" alt="drawing" width="589" height="400" align="middle"/>
+<img src="figs/MITtopo4M_vp0.png" alt="drawing" width="589" height="400" align="middle"/>
 
 This repository provides codes to build a planet model on a tetrahedal mesh,
 as well as its reference gravity.
