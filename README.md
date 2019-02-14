@@ -28,21 +28,20 @@ If you only need to build a tetrahedal mesh, please compile tetgen; if you are a
 
 Build your planetary models
 -----------------------------------------------------------------
-Please check the scripts under demos/CONST for a constant ball model and demos/PREM for a reference earth model. 
-
-Under demos/CONST, you may run 
+Please check the scripts under demos/CONST for a constant ball model or demos/PREM 
+for a reference earth model. Note that if the reference gravity is not needed, 
+you do not have to run Gravity. Under demos/CONST, you may run 
 ~~~ 
 run CONST_mesh; run Gravity;
 ~~~
-to obtain the model and its reference gravity. 
-
-Under demos/PREM, you may also run 
+to obtain the model and its reference gravity. Under demos/PREM, you may also run 
 ~~~
 run PREM_mesh; run Gravity;
 ~~~
-to get the reference gravity. 
+to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
+Here are two animations for [Compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [Shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 
-To design your own models, you may change the settings, including the discontinuities and model profiles. 
+To design your own models, you may change the settings, including the different discontinuities and model profiles. 
 
 Reference
 -------------------------------------------------------------------
