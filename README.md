@@ -27,7 +27,7 @@ Build your planetary models
 What can you get?  
 -----------------------------------------------------------------
 
-<img src="figs/CMI_94k.png" alt="drawing" width="295" height="200"/>
+<img src="figs/MIT1M_p2_vp.pdf" alt="drawing" width="295" height="200"/>
 
 Contact 
 -----------------------------------------------------------------
