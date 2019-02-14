@@ -1,7 +1,7 @@
 Planetary Model Builder 
 ================================================================
 
-<img src="figs/moho-mit_combined.png" alt="drawing" width="878" height="302" align="middle"/>
+<img src="figs/moho-mit_combined.png" alt="drawing" width="700" height="243" align="middle"/>
 
 This repository provides codes to build a planet model on a tetrahedal mesh,
 as well as its reference gravity. The figure above illustrates an Earth 
