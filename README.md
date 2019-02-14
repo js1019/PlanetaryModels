@@ -32,13 +32,33 @@ Please check the scripts under demos/CONST for a constant ball model and demos/P
 
 Under demos/CONST, you may run 
 ~~~ 
-run CONST_mesh; 
+run CONST_mesh; run Gravity;
 ~~~
-to obtain the model, and run 
+to obtain the model and its reference gravity. 
+
+Under demos/PREM, you may also run 
 ~~~
-run Gravity;
+run PREM_mesh; run Gravity;
 ~~~
 to get the reference gravity. 
+
+To design your own models, you may change the settings, including the discontinuities and model profiles. 
+
+Reference
+-------------------------------------------------------------------
+The repository provides codes to generate planetary models for the 2018 SuperComputing Conference [paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
+
+~~~
+@inproceedings{shi2018computing,
+  title={Computing planetary interior normal modes with a highly parallel polynomial filtering eigensolver},
+  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V},
+  booktitle={Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis, {SC}'18, Dallas, TX, November 11-16, 2018},
+  pages={71:1--71:13},
+  year={2018},
+  organization={ACM/IEEE}
+}
+~~~
+
 
 Contact 
 -----------------------------------------------------------------
