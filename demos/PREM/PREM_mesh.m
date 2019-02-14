@@ -1,10 +1,10 @@
 % build up an earth model
 clear all; clc;
-addpath('../modelbuilder/');  
+addpath('../../modelbuilder/');  
 
 fmesh  = 'output/PREM3k/prem_3L_3k';
 %fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
-tetgen = '../packages/tetgen1.5.0/tetgen'; 
+tetgen = '../../packages/tetgen1.5.0/tetgen'; 
 
 % finite element order (choose 1 or 2)
 pOrder  = 2;
@@ -29,21 +29,21 @@ a = 8e10; % 396 3k
 
 tic
 % load radial information
-load ../radialmodels/prem3L_noocean.mat
+load ../../radialmodels/prem3L_noocean.mat
 
 % radius 
 R1 = RD(1,1); R2 = RD(2,1); R3 = RD(3,1);
 
 % load unit spheres
-load ../unitspheres/data/Sph392.mat
+load ../../unitspheres/data/Sph392.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
-load ../unitspheres/data/Sph260.mat
+load ../../unitspheres/data/Sph260.mat
 p2 = p*R2; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-load ../unitspheres/data/Sph260.mat
+load ../../unitspheres/data/Sph260.mat
 p3 = p*R3; 
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 

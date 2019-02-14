@@ -1,12 +1,12 @@
 % construct the gravity fields
 clear all; clc; tic
-addpath('../packages/fmmlib3d-1.2/matlab/');
+addpath('../../packages/fmmlib3d-1.2/matlab/');
 
 
-fmesh = 'output/CONST3k/CONST_1L_3k';
+fmesh = 'output/PREM3k/prem_3L_3k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
 
-load ../radialmodels/CONST_gravity.mat
+load ../../radialmodels/CONST_gravity.mat
 %load ../radialmodels/prem3L_noocean_gravity.mat
 %saveFMM = false; 
 saveFMM = true;

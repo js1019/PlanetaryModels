@@ -1,14 +1,14 @@
 % build up an constant solid model
 clear all; clc;
-addpath('../modelbuilder/'); 
+addpath('../../modelbuilder/'); 
 
 fmesh  = './output/CONST3k/CONST_1L_3k';
 %fmesh = '/pylon5/ac4s8pp/js116/trueG/CONST128M/CONST_1L_128M';
 %tetgen = '/home/js116/Documents/tetgen1.5.0/tetgen';
-tetgen = '../packages/tetgen1.5.0/tetgen';
+tetgen = '../../packages/tetgen1.5.0/tetgen';
 
 % finite element order (choose 1 or 2)
-pOrder  = 2;
+pOrder  = 1;
 
 % set the value to contral the degrees of freedom
 a = 5e8; %392 3k
@@ -29,14 +29,14 @@ a = 5e8; %392 3k
 
 
 % load radial information
-load ../radialmodels/prem3L_noocean.mat
+load ../../radialmodels/prem3L_noocean.mat
 
 
 % radius 
 R1 = RD(1,1); 
 
 % load unit spheres
-load ../unitspheres/data/Sph392.mat
+load ../../unitspheres/data/Sph392.mat
 
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
