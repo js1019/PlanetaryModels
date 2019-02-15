@@ -42,7 +42,7 @@ To design your own models, you may change the settings, including the different 
 
 Furthermore
 ------------------------------------------------------------------
-You can build more complicated models! 
+You can build more realistic models! 
 
 <img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.png" width="425"/>
 
