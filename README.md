@@ -1,11 +1,8 @@
 Planetary Model Builder 
 ================================================================
 This repository provides codes to build a planet model on a tetrahedal mesh
-as well as its reference gravity. 
+as well as its reference gravity. Compressional and shear wave speed models are shown below. 
 
-
-What is the expectation? 
-----------------------------------------------------------------
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
 How to make it work for you? 
@@ -47,7 +44,7 @@ Furthermore
 ------------------------------------------------------------------
 You can build more complicated models! 
 
-<img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.gif" width="425"/>
+<img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.png" width="425"/>
 
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
 and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
