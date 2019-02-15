@@ -37,22 +37,25 @@ run PREM_mesh; run Gravity;
 to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 
+We use [Paraview](https://www.paraview.org/) to visualize the results. 
 To design your own models, you may change the settings, including the different discontinuities and model profiles. 
 
 
 Furthermore
 ------------------------------------------------------------------
-You can build more realistic models! 
+You can build more realistic models using similiar ideas! 
 
 <img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.png" width="425"/>
 
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
-and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
+and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.
+If you would like to reproduce these models, you may need to download the model data and make minor changes in the scripts to obtain and visualize your results. 
+
 
 
 Reference
 -------------------------------------------------------------------
-The repository provides scripts to generate planetary models for [the SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
+The repository provides scripts to generate planetary models for [our SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
 
 ~~~
 @inproceedings{shi2018computing,
