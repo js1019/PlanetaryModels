@@ -3,10 +3,10 @@ Planetary Model Builder
 This repository provides codes to build a planet model on a tetrahedal mesh
 as well as its reference gravity. 
 
-<img style="float: middle;" src="figs/moho-mit_combined.png" alt="drawing" width="700" height="243" />
 
-The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
-and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
+What is the expectation? 
+----------------------------------------------------------------
+<img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
 How to make it work for you? 
 ----------------------------------------------------------------
@@ -41,6 +41,17 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 
 To design your own models, you may change the settings, including the different discontinuities and model profiles. 
+
+
+Furthermore
+------------------------------------------------------------------
+You can build more complicated models! 
+
+<img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.gif" width="425"/>
+
+The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
+and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.  
+
 
 Reference
 -------------------------------------------------------------------
