@@ -7,7 +7,7 @@ fmesh  = 'output/PREM3k/prem_3L_3k';
 tetgen = '../../packages/tetgen1.5.0/tetgen'; 
 
 % finite element order (choose 1 or 2)
-pOrder  = 2;
+pOrder  = 1;
 
 % set the value to contral the degrees of freedom
 a = 8e10; % 396 3k
