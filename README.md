@@ -35,7 +35,7 @@ run PREM_mesh; run Gravity;
 ~~~
 to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 
-### A few Remarks
+### A few remarks
 + _Note that if the reference gravity is not needed, 
 you do not have to run Gravity._
 
