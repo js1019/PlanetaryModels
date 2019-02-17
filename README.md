@@ -1,9 +1,11 @@
 Planetary Model Builder 
 ================================================================
 This repository provides codes to build a planet model on a tetrahedal mesh
-as well as its reference gravity. Compressional and shear wave speed models are shown below. 
+as well as its reference gravity. 
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
+
+In the figures above, examples of compressional and shear wave speed models of our Earth are illustrated. 
 
 How to make it work for you? 
 ----------------------------------------------------------------
