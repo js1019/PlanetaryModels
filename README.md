@@ -38,9 +38,7 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 ### A few remarks
 + _If the reference gravity is not needed, 
 you do not have to run Gravity._
-
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
-
 + We use [Paraview](https://www.paraview.org/) to visualize the results. 
 + To design your own models, you may change the settings, including the different discontinuities and model profiles. 
 
