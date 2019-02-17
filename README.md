@@ -5,7 +5,7 @@ as well as its reference gravity.
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
-In the figures above, examples of compressional and shear wave speed models of our Earth are illustrated. 
+In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
 
 How to make it work for you? 
 ----------------------------------------------------------------
