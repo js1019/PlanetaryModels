@@ -36,7 +36,7 @@ run PREM_mesh; run Gravity;
 to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 
 ### A few remarks
-+ _Note that if the reference gravity is not needed, 
++ _If the reference gravity is not needed, 
 you do not have to run Gravity._
 
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
