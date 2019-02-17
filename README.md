@@ -9,12 +9,12 @@ In the above figures, examples of compressional and shear wave speed models of o
 
 How to make it work for you? 
 ----------------------------------------------------------------
-This repository uses several packages:  
-+ [TetGen](http://www.tetgen.org) by Hang Si  
-+ [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson  
-+ [several MATLAB scripts](https://github.com/tcew/nodal-dg) from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'  
-+ [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas  
-+ [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker
+This repository uses several packages, including 
++ [TetGen](http://www.tetgen.org) by Hang Si;   
++ [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson;  
++ [several MATLAB scripts](https://github.com/tcew/nodal-dg) from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'; 
++ [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas;  
++ [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker. 
 
 We've put most of the original materials under different folders 
 with some minor changes for this application.
