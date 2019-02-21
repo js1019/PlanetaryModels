@@ -1,7 +1,7 @@
 Planetary Model Builder 
 ================================================================
 This repository provides codes to build a planet model on a tetrahedal mesh
-as well as its reference gravity. 
+as well as its reference gravity. It supports [the planetary normal mode computation](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
