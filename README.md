@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-This repository provides codes to build a planet model on a tetrahedal mesh
+This repository provides codes to build a planet model on a tetrahedal (deformable) mesh
 as well as its reference gravity. It supports [the planetary normal mode computation](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
@@ -21,7 +21,7 @@ with some minor changes for this application.
 
 
 You may follow the README.md under packages to compile what you need. 
-If you only need to build a tetrahedal mesh, please compile tetgen; if you are a linux user, just go to packages/tetgen1.5.0 and type make. If you need to compute the reference gravity, please go to packages/fmmlib3d-1.2, and compile it.  
+If you only need to build a tetrahedal mesh, please compile tetgen; if you are a linux user, just go to packages/tetgen1.5.0 and type make. If you need to compute the reference gravity, please check the readme under packages/ and compile packages/fmmlib3d-1.2.  
 
 
 Build your planetary models
@@ -38,8 +38,7 @@ run PREM_mesh; run Gravity;
 to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 
 ### A few remarks
-+ _If the reference gravity is not needed, 
-you do not have to run Gravity._
++ If the reference gravity is not needed, you do not have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 + We use [Paraview](https://www.paraview.org/) to visualize the results. 
 + To design your own models, you may change the settings, including the different discontinuities and model profiles. 
@@ -73,6 +72,6 @@ The repository provides scripts to generate planetary models for [our SuperCompu
 ~~~
 
 
-Contact 
+Report
 -----------------------------------------------------------------
 Please report issues under this repository. 
