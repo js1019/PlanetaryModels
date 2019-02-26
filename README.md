@@ -1,7 +1,7 @@
 Planetary Model Builder 
 ================================================================
 This repository provides codes to build a planet model on a tetrahedal (deformable) mesh
-as well as its reference gravity. It supports [the planetary normal mode computation](https://github.com/js1019/NormalModes).  
+as well as its reference gravity. It supports [the repository for normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
@@ -42,6 +42,7 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 + We use [Paraview](https://www.paraview.org/) to visualize the results. 
 + To design your own models, you may change the settings, including the different discontinuities and model profiles. 
++ To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize surface distance functions to build your own meshes.  
 
 
 Furthermore
