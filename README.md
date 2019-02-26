@@ -1,7 +1,7 @@
 Planetary Model Builder 
 ================================================================
-This repository provides codes to build a planet model on a tetrahedal (deformable) mesh
-as well as its reference gravity. It supports [the repository for normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
+This repository provides codes to build a planet model on a deformable tetrahedal mesh
+as well as its reference gravity. It supports the repository for [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
@@ -75,4 +75,4 @@ The repository provides scripts to generate planetary models for [our SuperCompu
 
 Report
 -----------------------------------------------------------------
-Please report issues under this repository. 
+Please let us know any issues of this repository. 
