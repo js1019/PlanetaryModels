@@ -34,7 +34,8 @@ function [p,t]=distmeshsurface(fd,fh,h0,bbox,varargin)
 
 %   Copyright (C) 2004-2012 Per-Olof Persson. See COPYRIGHT.TXT for details.
 
-dptol=1e-4; ttol=.1; Fscale=1.2; deltat=.2; deps=sqrt(eps)*h0;
+dptol=1e-3; %JS modify it from 1e-4 to 1e-3 for speed
+ttol=.1; Fscale=1.2; deltat=.2; deps=sqrt(eps)*h0;
 
 % 1. Create initial distribution in bounding box (isosurface from grid)
 [x,y,z]=ndgrid(bbox(1,1):h0:bbox(2,1),bbox(1,2):h0:bbox(2,2),bbox(1,3):h0:bbox(2,3));
