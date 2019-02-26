@@ -1,13 +1,16 @@
 % build basic uniform mesh on Unit Sphere
 clear all; clc
 %parpool('local');
-addpath('../packages/distmesh/')
+addpath('../../packages/distmesh/')
 fd=@(p) dsphere(p,0,0,0,1);
 
 surf_d = 0.3; 
 tic
 [p,t]=distmeshsurface(fd,@huniform,surf_d,1.1*[-1,-1,-1;1,1,1]);
 toc
+
+fname = ['Sph',num2str(size(t,1)),'.mat'];
+save(fname,'fd','p','surf_d','t');
 
 % for reproducing
 
