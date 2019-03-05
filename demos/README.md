@@ -1,7 +1,7 @@
 ## Demos for model building
 The demos under CONST/ and PREM/ contain scripts to create radial ball models. You may directly run these demos. 
 
-### Build similar models with various degrees of freedom 
+### Building similar models with various degrees of freedom 
 Prior to build a planetary model, we utilize a radial model that is stored in ../../radialmodels/prem3L_noocean.mat. 
 I will use CONST/CONST_mesh.m, you will need to set the path to you mesh and model with its name 
 ~~~
@@ -11,7 +11,7 @@ You can then set up the finite element polynomial order
 ~~~
 pOrder  = 1; %(choose 1 or 2)
 ~~~
-You then set up the value to contral the degrees of freedom 
+You then set up the value to control the degrees of freedom 
 ~~~
 a = 5e8; % you may play with this value to see the changes. 
 ~~~
@@ -31,7 +31,7 @@ run CONST_mesh
 to obtain both meshes and models. 
 
 ### Computing the reference gravity 
-Once we obtain the mesh and model, we compute the reference gravity, if needed, using Fast Multiple Method. 
+Once we obtain the mesh and model, we compute the reference gravity, **if needed**, using Fast Multiple Method. 
 Similarly, you can set up the path to the model and the finite element polynomial order 
 ~~~
 fmesh  = './output/CONST3k/CONST_1L_3k'; % note that CONST_1L_3k is the model name. 
@@ -41,6 +41,10 @@ The scaling factor is used for the vtk files and visualization only
 ~~~
 scaling = 6.371*10^3; % here we use the radial of the Earth. 
 ~~~
-It will not affect the computation. 
-
+It will not affect the computation. You can then run 
+~~~
+run Gravity
+~~~
+If you want compute the reference gravity for a huge model, the memory consumption may be an issue. 
+You may need to distribute many bodies into several small groups and compute the interactions between them. 
 
