@@ -2,13 +2,14 @@
 clear all;clc;
 addpath('../modelbuilder/'); 
 
-fmesh  = '/jia/PNM/CONST/trueG/CONST10k/';
-fout   = '/jia/PNM/CONST/output/trueG/CONST10k/datan16/';
-fbase  = 'CONST_1L_10k.1';
-fdtail = '0.0000000E+00_1.000000';
+fmesh  = '../demos/CONST/output/CONST3k/';
+fout   = 'demos/CONST3k/';
+fbase  = 'CONST_1L_3k.1';
+fdtail = '0.00000000_1.00000000';
 
-JOB = 2; pOrder = 2; nproc = 16; nth = 8; 
+JOB = 1; pOrder = 1; nproc = 1; nth = 7; 
 Radial = 6.371E3;
+
 
 fmeshorg = [fmesh,fbase];
 fdat =  [fout,fbase,'_JOB',int2str(JOB),'_pod',int2str(pOrder),...

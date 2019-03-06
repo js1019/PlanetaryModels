@@ -2,12 +2,12 @@
 clear all;clc;
 addpath('../modelbuilder/'); 
 
-fmesh  = '/jia/PNM/PREM/trueG/PREM10k/';
-fout   = '/jia/PNM/PREM/output/trueG/PREM10k/datan16/';
-fbase  = 'prem_3L_10k.1';
+fmesh  = '../demos/PREM/output/PREM3k/';
+fout   = 'demos/PREM3k/';
+fbase  = 'prem_3L_3k.1';
 fdtail = '0.1000000_1.000000';
 
-JOB = 2; pOrder = 2; nproc = 16; nth = 4; 
+JOB = 2; pOrder = 2; nproc = 48; nth = 4; 
 Radial = 6.371E3;
 
 fmeshorg = [fmesh,fbase];
@@ -20,9 +20,6 @@ fvtk = [fout,'vtk/',fbase,'_JOB',int2str(JOB),'_pod',int2str(pOrder),...
 fvlist = [fout,fbase,'_pod',int2str(pOrder),...
     '_np',int2str(nproc),'_vlist.dat'];
 
-fvloct = [fout,fbase,'_pod',int2str(pOrder),...
-    '_np',int2str(nproc),'_vloct.dat'];
-
 fvstat = [fout,fbase,'_pod',int2str(pOrder),...
     '_np',int2str(nproc),'_vstat.dat'];
 
@@ -34,9 +31,6 @@ fid = fopen(fvlist,'r');
 vlist = fread(fid,'int'); 
 fclose(fid);
 
-fid = fopen(fvloct,'r'); 
-vloct = fread(fid,'int'); 
-fclose(fid);
 
 fid = fopen(fvstat,'r'); 
 vstat = fread(fid,'int'); 
