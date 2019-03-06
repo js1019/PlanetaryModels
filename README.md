@@ -40,8 +40,8 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 ### A few remarks
 + If the reference gravity is not needed, you do not have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
-+ We use [Paraview](https://www.paraview.org/) to visualize the results. 
-+ To design your own models, you may change the settings, including the different discontinuities and model profiles. 
++ We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk files**). 
++ To design your own models, you may change the settings, including **the different discontinuities and model profiles**. 
 + To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize **surface distance functions** to build your own meshes.  
 + To postprocess the results, you can use **visual/** to visualize your computed normal modes from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
