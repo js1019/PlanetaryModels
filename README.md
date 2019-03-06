@@ -46,7 +46,8 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 
 Postprocess
 ------------------------------------------------------------------
-You can use **visual/** to visualize your computed normal modes from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
+You can use **visual/** to visualize your computed normal modes from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes). 
+Please check visual/README.md for more details. 
 
 Furthermore
 ------------------------------------------------------------------
