@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-This repository provides codes to build a planet model on a deformable tetrahedal mesh
+This repository provides codes to build a planetary model on a deformable tetrahedal mesh
 as well as its reference gravity. It supports the repository for [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
@@ -43,6 +43,7 @@ to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
 + We use [Paraview](https://www.paraview.org/) to visualize the results. 
 + To design your own models, you may change the settings, including the different discontinuities and model profiles. 
 + To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize surface distance functions to build your own meshes.  
++ To postprocess the results, you can use visual/ to visualize your computed normal modes from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
 
 Furthermore
