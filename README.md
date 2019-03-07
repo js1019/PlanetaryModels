@@ -53,6 +53,7 @@ Furthermore
 ------------------------------------------------------------------
 You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its demos](http://persson.berkeley.edu/distmesh/).  
 <img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.png" width="425"/>
+
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
 and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.
 If you would like to reproduce these models, you may need to download the model data and make minor changes in the scripts to obtain and visualize your results. 
