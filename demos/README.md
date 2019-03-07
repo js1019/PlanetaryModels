@@ -37,7 +37,7 @@ Similarly, you can set up the path to the model and the finite element polynomia
 fmesh  = './output/CONST3k/CONST_1L_3k'; % note that CONST_1L_3k is the model name. 
 pOrder  = 1; %(choose 1 or 2)
 ~~~
-The scaling factor is used for the vtk files and visualization only 
+The scaling factor is used for visualization only 
 ~~~
 scaling = 6.371*10^3; % here we use the radial of the Earth. 
 ~~~
@@ -46,5 +46,5 @@ It will not affect the computation. You can then run
 run Gravity
 ~~~
 If you want compute the reference gravity for a huge model, the memory consumption may be an issue. 
-You may need to distribute many bodies into several small groups and compute the interactions between them. 
+You may need to split many bodies into several small groups and compute the interactions between them. 
 
