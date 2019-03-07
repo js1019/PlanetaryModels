@@ -15,7 +15,7 @@ fdtail = '0.00000000_1.00000000';
 JOB = 1; pOrder = 1; nproc = 1; nth = 7; 
 ~~~
 We note that JOB, pOrder are the inputs while you run this application; 
-nproc denotes the number of processes; nth denotes the n-th modes of the current run. 
+nproc denotes the number of processes; nth denotes the n-th modes of the mode collection. 
 
-It is not difficult to visualize modes using paraview vector plots. 
-We recommend [this tutorial](https://www.youtube.com/watch?v=cygVdhn-kG0). 
+It is not difficult to visualize modes using paraview's vector plots. 
+We recommend readers to follow [this tutorial](https://www.youtube.com/watch?v=cygVdhn-kG0). 
