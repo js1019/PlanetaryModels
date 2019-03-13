@@ -6,6 +6,10 @@ Here are four packages that are used for model building:
 3. A Matlab script for vtk users by Shawn Walker.  
 4. TetGen by Hang Si.
 
+### 1. distmesh
+
+No compilation required.
+
 ### 2. fmmlib3d-1.2
 
 Fast Multiple Method. You only need to compile this if you want to compute the reference gravity.
@@ -40,3 +44,12 @@ ln -s /opt/local/lib/libgcc/libgfortran.3.dylib /usr/local/lib/libgfortran.3.dyl
 #### 2.2 Other platforms
 
 Not tested on other platforms. You may have to modify the makefiles.  
+
+### 3. VTK scripts
+
+No compilation required.
+
+### 4. TetGen
+
+cd packages/tetgen1.5.0 
+make
