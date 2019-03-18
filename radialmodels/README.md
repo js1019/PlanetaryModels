@@ -41,4 +41,4 @@ We list the references for different models.
   publisher={Elsevier}
 }
 ~~~
-The collection of different radial Mars model can be find via [the blind test](http://blindtest.mars.ethz.ch/). 
+The collection of different radial Mars models can be find via [the blind test](http://blindtest.mars.ethz.ch/). 
