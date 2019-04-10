@@ -1,0 +1,114 @@
+% build up an earth model
+clear all; clc;
+addpath('../../modelbuilder/');  
+
+fmesh  = '/local/js116/Models0/RTMars/input1/RTMDWAK2M/RTMDWAK_3L_2M';
+%fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
+tetgen = '../../packages/tetgen1.5.0/tetgen'; 
+
+% finite element order (choose 1 or 2)
+pOrder  = 2;
+
+% set the value to contral the degrees of freedom
+%a = 1.2e8; % 3k7 8k
+%a = 9e9; % 3k7 20k
+%a = 4e9; % 6k 40k
+%a = 3e7; % 10k 80k
+%a = 6e6; % 15k 120k
+%a = 3.8e6; % 15k 150k
+%a = 6e6; % 23k 200k
+%a = 7.75e5; % 42k 500k
+%a = 3.7e5; % 42k 1M
+a = 1.65e5; % 94k 2M
+
+%a = 5.8e5; % 167k 4M
+%a = 3.1e5; % 377k 8M
+%a = 1.5e5; % 589k 16M
+%a = 7.5e4; % 1047k 32M
+%a = 3.6e4; % 1507k 64M
+%a = 1.75e4; % 2353k 128M
+%a = 8.0e3; % 3077k 256M
+%a = 5.0e3; % 3077k 400M
+%a = 4.0e3; % 3077k 512M
+%a = 3.0e3; % 3077k 690M
+
+
+tic
+% load radial information
+load ../../radialmodels/marsDWAK_3L_gravity.mat
+
+% radius 
+R1 = RD(3,1); R2 = RD(2,1); 
+
+% load unit spheres
+load ../../unitspheres/MarsCrust/workdata/Msurf_94k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_42k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_23k.mat 
+%load ../../unitspheres/MarsCrust/workdata/Msurf_15k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_10k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_6k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_3k7.mat
+p1 = p;
+np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
+
+load ../../unitspheres/MarsCrust/workdata/Marscmi_40k.mat
+%load ../../unitspheres/MarsCrust/workdata/Marscmi_15k.mat
+%load ../../unitspheres/MarsCrust/workdata/Marscmi_10k.mat
+%load ../../unitspheres/MarsCrust/workdata/Marscmi_440.mat
+p2 = p; 
+np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
+
+load ../../unitspheres/MarsEllp/MarsEllp23580.mat
+%load ../../unitspheres/MarsEllp/MarsEllp14904.mat
+%load ../../unitspheres/MarsEllp/MarsEllp5892.mat
+%load ../../unitspheres/MarsEllp/MarsEllp3656.mat
+%load ../../unitspheres/MarsEllp/MarsEllp392.mat
+%load ../../unitspheres/MarsEllp/MarsEllp260.mat
+p3 = p*R2/nthroot(1-589e-5,3); % change it!!
+np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
+
+istart = 1; iend = np1; 
+pin(istart:iend,:) = p1;
+istart = iend + 1; iend = iend + np2; 
+pin(istart:iend,:) = p2;
+istart = iend + 1; iend = iend + np3; 
+pin(istart:iend,:) = p3;
+
+istart = 1; iend = nt1; 
+tin(istart:iend,:) = t1;
+istart = iend + 1; iend = iend + nt2; 
+tin(istart:iend,:) = t2;
+istart = iend + 1; iend = iend + nt3; 
+tin(istart:iend,:) = t3;
+
+% generate internal surfaces 
+trisurf2poly(fmesh,pin,tin);
+toc 
+
+fhed = [fmesh,'.1_mesh.header'];
+fele = [fmesh,'.1_ele.dat'];
+fngh = [fmesh,'.1_neigh.dat'];
+fnde = [fmesh,'.1_node.dat'];
+
+% generate the mesh
+unix([tetgen,' -pq1.5nYVFAa',num2str(a,'%f'),' ',fmesh,'.poly']);
+toc
+[pout,tout,~,at,neigh] = read_mesh3d([fmesh,'.1']);
+
+dh =[size(tout,1) size(pout,1)];
+fid = fopen(fhed,'w');
+fprintf(fid,'%d %d',dh);
+
+fid=fopen(fele,'w');
+fwrite(fid,tout','int');
+fid=fopen(fngh,'w');
+fwrite(fid,neigh','int');
+fid=fopen(fnde,'w');
+fwrite(fid,pout','float64');
+
+%vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
+size(tout)
+toc
+
+
+run MarsDWAK_models
