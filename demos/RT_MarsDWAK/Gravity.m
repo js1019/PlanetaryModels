@@ -7,8 +7,8 @@ fmesh  = '/local/js116/Models0/RTMars/input1/RTMDWAK200k/RTMDWAK_3L_200k';
 
 %load ../../radialmodels/CONST_gravity.mat
 load ../../radialmodels/marsDWAK_3L_gravity.mat
-saveFMM = false; 
-%saveFMM = true;
+%saveFMM = false; 
+saveFMM = true;
 
 % finite element order (choose 1 or 2)
 pOrder  = 1;
