@@ -9,7 +9,7 @@ Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal surfaces via
 
 ### 3. 3D crusts 
 Please check mooncrust/ or Marscrust/ as demos to build a 3D crust, including topography and thickness. 
-The lunar crust model is based on the results of two NASA missions: the Lunar Orbiter Laser Altimeter [(LOLA)](https://lola.gsfc.nasa.gov/)) and Gravity Recovery and Interior Laboratory [(GRAIL)](https://www.nasa.gov/mission_pages/grail/main/index.html). 
+The lunar crust model is based on the results of two NASA missions: the Lunar Orbiter Laser Altimeter [(LOLA)](https://lola.gsfc.nasa.gov/) and Gravity Recovery and Interior Laboratory [(GRAIL)](https://www.nasa.gov/mission_pages/grail/main/index.html). 
 The Mars crust model is based on the results of the NASA mission, the Mars Orbiter Laser Altimeter [(MOLA)](https://attic.gsfc.nasa.gov/mola/). 
 
 ### Reference 
