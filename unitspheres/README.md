@@ -24,7 +24,7 @@ The Mars crust model is based on the results of the NASA mission, the Mars Orbit
   publisher={Wiley Online Library}
 }
 ~~~
-for the lunar topography. 
+for the lunar topography (the [LOAL](https://lola.gsfc.nasa.gov/) mission). 
 ~~~
 @article{wieczorek2013crust,
   title={{The crust of the Moon as seen by GRAIL}},
