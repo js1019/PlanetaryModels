@@ -2,15 +2,14 @@
 clear all; clc;
 addpath('../../modelbuilder/');  
 
-fmesh  = '/local/js116/Models0/RTMars/input1/RTMDWAK2M/RTMDWAK_3L_2M';
-%fmesh = '/pylon2/ac4s8pp/js116/NMmodels/PREM512M/prem_3L_512M';
+fmesh  = 'output/RTMDWAK8k/RTMDWAK_3L_8k';
 tetgen = '../../packages/tetgen1.5.0/tetgen'; 
 
 % finite element order (choose 1 or 2)
-pOrder  = 2;
+pOrder  = 1;
 
 % set the value to contral the degrees of freedom
-%a = 1.2e8; % 3k7 8k
+a = 1.2e8; % 3k7 8k
 %a = 9e9; % 3k7 20k
 %a = 4e9; % 6k 40k
 %a = 3e7; % 10k 80k
@@ -19,7 +18,7 @@ pOrder  = 2;
 %a = 6e6; % 23k 200k
 %a = 7.75e5; % 42k 500k
 %a = 3.7e5; % 42k 1M
-a = 1.65e5; % 94k 2M
+%a = 1.65e5; % 94k 2M
 
 %a = 5.8e5; % 167k 4M
 %a = 3.1e5; % 377k 8M
@@ -41,29 +40,29 @@ load ../../radialmodels/marsDWAK_3L_gravity.mat
 R1 = RD(3,1); R2 = RD(2,1); 
 
 % load unit spheres
-load ../../unitspheres/MarsCrust/workdata/Msurf_94k.mat
+%load ../../unitspheres/MarsCrust/workdata/Msurf_94k.mat
 %load ../../unitspheres/MarsCrust/workdata/Msurf_42k.mat
 %load ../../unitspheres/MarsCrust/workdata/Msurf_23k.mat 
 %load ../../unitspheres/MarsCrust/workdata/Msurf_15k.mat
 %load ../../unitspheres/MarsCrust/workdata/Msurf_10k.mat
 %load ../../unitspheres/MarsCrust/workdata/Msurf_6k.mat
-%load ../../unitspheres/MarsCrust/workdata/Msurf_3k7.mat
+load ../../unitspheres/MarsCrust/workdata/Msurf_3k7.mat
 p1 = p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
-load ../../unitspheres/MarsCrust/workdata/Marscmi_40k.mat
+%load ../../unitspheres/MarsCrust/workdata/Marscmi_40k.mat
 %load ../../unitspheres/MarsCrust/workdata/Marscmi_15k.mat
 %load ../../unitspheres/MarsCrust/workdata/Marscmi_10k.mat
-%load ../../unitspheres/MarsCrust/workdata/Marscmi_440.mat
+load ../../unitspheres/MarsCrust/workdata/Marscmi_440.mat
 p2 = p; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-load ../../unitspheres/MarsEllp/MarsEllp23580.mat
+%load ../../unitspheres/MarsEllp/MarsEllp23580.mat
 %load ../../unitspheres/MarsEllp/MarsEllp14904.mat
 %load ../../unitspheres/MarsEllp/MarsEllp5892.mat
 %load ../../unitspheres/MarsEllp/MarsEllp3656.mat
 %load ../../unitspheres/MarsEllp/MarsEllp392.mat
-%load ../../unitspheres/MarsEllp/MarsEllp260.mat
+load ../../unitspheres/MarsEllp/MarsEllp260.mat
 p3 = p*R2/nthroot(1-589e-5,3); % change it!!
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 

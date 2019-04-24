@@ -2,10 +2,8 @@
 clear all; clc; tic
 addpath('../../packages/fmmlib3d-1.2/matlab/');
 
-fmesh  = '/local/js116/Models0/RTMars/input1/RTMDWAK200k/RTMDWAK_3L_200k';
-%fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
+fmesh  = 'output/RTMDWAK8k/RTMDWAK_3L_8k';
 
-%load ../../radialmodels/CONST_gravity.mat
 load ../../radialmodels/marsDWAK_3L_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
