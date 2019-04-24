@@ -3,7 +3,7 @@ External packages
 Here are four packages that are used for model building:  
 1. [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson.   
 2. [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas.    
-3. [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk)for vtk users by Shawn Walker.  
+3. [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker.  
 4. [TetGen](http://www.tetgen.org) by Hang Si.
 
 ### 1. distmesh
