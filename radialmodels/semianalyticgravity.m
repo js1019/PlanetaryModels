@@ -1,15 +1,16 @@
 % calculate gravity
 clear all; clc;
-load prem3L_noocean.mat
+%load prem3L_noocean.mat
+load Moon6L.mat
 G = 6.6723*10^-5; % gravitational constant
 
-dsy = MI(:,2); 
-RI  = MI(:,1); 
+dsy = MI(end:-1:1,2); dsy = dsy*1e-3;
+RI  = MI(end:-1:1,1); 
 
 for i = 2:length(MI(:,1))
-    if (abs(MI(i-1,1)-MI(i,1))<1.E-3)
+    if (abs(MI(i-1,1)-MI(i,1))<1.E-2)
        %j = j + 1;
-       RI(i) = RI(i) + 1.E-4; 
+       RI(i) = RI(i) + 1.E-2; 
     end
 end
 

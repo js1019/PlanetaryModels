@@ -1,7 +1,7 @@
 % deal with Weber model
 clear all; clc; 
 
-fname = 'moon_weber2011.txt';
+fname = 'models1D/moon_weber2011.txt';
 % Columns from left to right represent 
 % radius,depth,density,Vpv,Vph,Vsv,Vsh,eta,Q-mu,Q-kappa
 M = load(fname);
@@ -45,7 +45,8 @@ end
           RD(l,2) = insc(i,2);
           if l < nlayer; l = l + 1; end
      else
-          MI(insc(i,2),1) = MI(insc(i,2),1) + .1;
+          MI(insc(i,2),1) = MI(insc(i,2),1) - 1e-3;
      end
  end
  RD(nlayer+1,2) = size(MI,1); 
+ clear i j l
