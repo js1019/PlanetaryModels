@@ -34,8 +34,8 @@ run {CONST/PREM/M6Ltopo/MarsDWAK}_mesh; run Gravity;
 ~~~
 to obtain the model and its reference gravity. 
 Note that the 3D crusts used in this work are based on the results of several NASA missions, including 
-the Lunar Orbiter Laser Altimeter [(LOLA)](https://lola.gsfc.nasa.gov/), Gravity Recovery and Interior Laboratory [(GRAIL)](https://www.nasa.gov/mission_pages/grail/main/index.html) and 
-the Mars Orbiter Laser Altimeter [(MOLA)](https://attic.gsfc.nasa.gov/mola/). 
+the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)), Gravity Recovery and Interior Laboratory ([GRAIL](https://www.nasa.gov/mission_pages/grail/main/index.html)) and 
+the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
 Please see unitspheres/ for more details. 
 
 ### A few remarks
