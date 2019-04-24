@@ -9,7 +9,7 @@ Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal surfaces via
 
 ### 3. 3D crusts 
 Please check mooncrust/ or Marscrust/ as demos to build a 3D crust, including topography and thickness. 
-The lunar crust model is based on the results of two NASA missions: Lunar Reconnaissance Orbiter [(LRO)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL043751) and Gravity Recovery and Interior Laboratory [(GRAIL)](https://science.sciencemag.org/content/339/6120/671). 
+The lunar crust model is based on the results of two NASA missions: the Lunar Orbiter Laser Altimeter [(LOLA)](https://lola.gsfc.nasa.gov/)) and Gravity Recovery and Interior Laboratory [(GRAIL)](https://www.nasa.gov/mission_pages/grail/main/index.html). 
 The Mars crust model is based on the results of the NASA mission, the Mars Orbiter Laser Altimeter [(MOLA)](https://attic.gsfc.nasa.gov/mola/). 
 
 ### Reference 
@@ -24,7 +24,7 @@ The Mars crust model is based on the results of the NASA mission, the Mars Orbit
   publisher={Wiley Online Library}
 }
 ~~~
-for the lunar topography (the [LOAL](https://lola.gsfc.nasa.gov/) mission). 
+for [the lunar topography](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL043751). 
 ~~~
 @article{wieczorek2013crust,
   title={{The crust of the Moon as seen by GRAIL}},
@@ -37,7 +37,7 @@ for the lunar topography (the [LOAL](https://lola.gsfc.nasa.gov/) mission).
   publisher={American Association for the Advancement of Science}
 }
 ~~~
-for the lunar crust. 
+for [the lunar crust](https://science.sciencemag.org/content/339/6120/671). 
 ~~~
 @article{goossens2017evidence,
   title={{Evidence for a low bulk crustal density for Mars from gravity and topography}},
@@ -50,4 +50,4 @@ for the lunar crust.
   publisher={Wiley Online Library}
 }
 ~~~
-for the Mars crust. 
+for [the Mars crust](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL074172). 
