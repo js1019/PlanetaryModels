@@ -16,7 +16,7 @@ This repository uses several packages, including
 + [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas;  
 + [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker. 
 
-We've put most of the original materials under different folders 
+We've put most of the original codes under different folders 
 with some minor changes for this application.
 
 
@@ -37,7 +37,7 @@ to obtain the model and its reference gravity.
 + If the reference gravity is **not** needed, you do **not** have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 + We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk files**). 
-+ To design your own models, you may change the settings, including **the different discontinuities and model profiles**. 
++ To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
 + To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize **surface distance functions** to build your own meshes.  
 
 Postprocess
