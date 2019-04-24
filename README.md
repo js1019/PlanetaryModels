@@ -26,12 +26,17 @@ If you only need to build a tetrahedal mesh, please compile tetgen; if you are a
 
 Build your planetary models
 -----------------------------------------------------------------
-Please check the scripts under demos/CONST for a constant ball model or demos/PREM 
-for a reference earth model. Under these folders, you may run 
+Please check the scripts under demos/CONST for a constant ball model, demos/PREM 
+for a standard Earth model, demos/Moon for a Moon model and demos/RT_MarsDWAK for a Mars model. 
+Under these folders, you may run 
 ~~~ 
 run {CONST/PREM/M6Ltopo/MarsDWAK}_mesh; run Gravity;
 ~~~
 to obtain the model and its reference gravity. 
+Note that the 3D crusts used in this work are based on the results of several NASA missions, including 
+the Lunar Orbiter Laser Altimeter [(LOLA)](https://lola.gsfc.nasa.gov/), Gravity Recovery and Interior Laboratory [(GRAIL)](https://www.nasa.gov/mission_pages/grail/main/index.html) and 
+the Mars Orbiter Laser Altimeter [(MOLA)](https://attic.gsfc.nasa.gov/mola/). 
+Please see unitspheres/ for more details. 
 
 ### A few remarks
 + If the reference gravity is **not** needed, you do **not** have to run Gravity.
