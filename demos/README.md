@@ -1,9 +1,15 @@
 ## Demos for model building
-The demos under CONST/ and PREM/ contain scripts to create radial ball models. You may directly run these demos. 
+The demos under CONST/, PREM/, Moon/, RT_MarsDWAK contain scripts to create planetary models. You may directly run these demos. 
+
+Four model generators are provided:
++ CONST: a constant perfectly spherically symmetric pure solid ball has a size of the Earth;
++ PREM: a standard radial Earth model from [Dziewonski & Anderson 1981](https://www.sciencedirect.com/science/article/pii/0031920181900467); 
++ Moon: a radial Moon model from [Weber et al., 2011](https://science.sciencemag.org/content/331/6015/309) with its 3D crust; 
++ RT_MarsDWAK: a radial Mars from [Khan et al., 2016](https://www.sciencedirect.com/science/article/pii/S0031920116300875) model with its 3D crust; 
 
 ### Building similar models with various degrees of freedom 
 Prior to build a planetary model, we utilize a radial model that is stored in ../../radialmodels/prem3L_noocean.mat. 
-I will use CONST/CONST_mesh.m, you will need to set the path to you mesh and model with its name 
+Here, I use CONST/CONST_mesh.m as an example. You will need to set the path to you mesh and model with its name 
 ~~~
 fmesh  = './output/CONST3k/CONST_1L_3k'; % note that CONST_1L_3k is the model name. 
 ~~~
