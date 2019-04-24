@@ -27,18 +27,14 @@ If you only need to build a tetrahedal mesh, please compile tetgen; if you are a
 Build your planetary models
 -----------------------------------------------------------------
 Please check the scripts under demos/CONST for a constant ball model or demos/PREM 
-for a reference earth model. Under demos/CONST, you may run 
+for a reference earth model. Under these folders, you may run 
 ~~~ 
-run CONST_mesh; run Gravity;
+run {CONST/PREM/M6Ltopo/MarsDWAK}_mesh; run Gravity;
 ~~~
-to obtain the model and its reference gravity. Under demos/PREM, you may also run 
-~~~
-run PREM_mesh; run Gravity;
-~~~
-to get the Preliminary Reference Earth Model (PREM) and its reference gravity.
+to obtain the model and its reference gravity. 
 
 ### A few remarks
-+ If the reference gravity is not needed, you do not have to run Gravity.
++ If the reference gravity is **not** needed, you do **not** have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 + We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk files**). 
 + To design your own models, you may change the settings, including **the different discontinuities and model profiles**. 
