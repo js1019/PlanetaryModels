@@ -5,7 +5,7 @@ Four model generators are provided:
 + CONST: a constant perfectly spherically symmetric pure solid ball has a size of the Earth;
 + PREM: a standard radial Earth model from [Dziewonski & Anderson 1981](https://www.sciencedirect.com/science/article/pii/0031920181900467); 
 + Moon: a radial Moon model from [Weber et al., 2011](https://science.sciencemag.org/content/331/6015/309) with its 3D crust; 
-+ RT_MarsDWAK: a radial Mars from [Khan et al., 2016](https://www.sciencedirect.com/science/article/pii/S0031920116300875) model with its 3D crust; 
++ RT_MarsDWAK: a radial Mars from [Khan et al., 2016](https://www.sciencedirect.com/science/article/pii/S0031920116300875) model with its 3D crust as well as its centrfugal acceleration due to its rotation; 
 
 ### Building similar models with various degrees of freedom 
 Prior to build a planetary model, we utilize a radial model that is stored in ../../radialmodels/prem3L_noocean.mat. 
