@@ -1,18 +1,18 @@
 ## Build discontinuities for planets
 
-### 1. Perfectly spherically symmetric surfaces 
+### Perfectly spherically symmetric surfaces 
 Please check data/unit_sphere.m as a demo to build a surface via applying a surface distant function. 
 In this test case, we simply use a unit sphere. 
 
-### 2. Ellipsoidal surfaces
+### Ellipsoidal surfaces
 Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal surfaces via using a surface distant function. 
 
-### 3. 3D crusts 
+### Topography and 3D crusts 
 Please check mooncrust/ or Marscrust/ as demos to build a 3D crust, including topography and thickness. 
 The lunar crust model is based on the results of two NASA missions: the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)) and Gravity Recovery and Interior Laboratory ([GRAIL](https://www.nasa.gov/mission_pages/grail/main/index.html)). 
 The Mars crust model is based on the results of the NASA mission, the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
 
-### Reference 
+## Reference 
 Here are some references for modeling the 3D crusts. 
 ~~~
 @article{smith2010initial,
@@ -39,6 +39,19 @@ for [the lunar topography](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1
 }
 ~~~
 for [the lunar crust](https://science.sciencemag.org/content/339/6120/671). 
+~~~
+@article{smith1999global,
+  title={The global topography of Mars and implications for surface evolution},
+  author={Smith, David E and Zuber, Maria T and Solomon, Sean C and Phillips, Roger J and Head, James W and Garvin, James B and Banerdt, W Bruce and Muhleman, Duane O and Pettengill, Gordon H and Neumann, Gregory A and others},
+  journal={Science},
+  volume={284},
+  number={5419},
+  pages={1495--1503},
+  year={1999},
+  publisher={American Association for the Advancement of Science}
+}
+~~~
+for [the Mars topography](https://science.sciencemag.org/content/284/5419/1495). 
 ~~~
 @article{goossens2017evidence,
   title={{Evidence for a low bulk crustal density for Mars from gravity and topography}},
