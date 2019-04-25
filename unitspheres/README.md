@@ -5,7 +5,7 @@ Please check data/unit_sphere.m as a demo to build a surface via applying a surf
 In this test case, we simply use a unit sphere. 
 
 ### Ellipsoidal surfaces
-Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal surfaces via using a surface distant function. 
+Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal surfaces via using surface distant functions 
 
 ### Topography and 3D crusts 
 Please check mooncrust/ or Marscrust/ as demos to build a 3D crust, including topography and thickness. 
