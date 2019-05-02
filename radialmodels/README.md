@@ -21,7 +21,7 @@ We list the references for different models.
 @article{weber2011seismic,
   title={Seismic detection of the lunar core},
   author={Weber, Renee C and Lin, Pei-Ying and Garnero, Edward J and Williams, Quentin and Lognonne, Philippe},
-  journal={science},
+  journal={Science},
   volume={331},
   number={6015},
   pages={309--312},
