@@ -38,7 +38,7 @@ Here are four packages that are used for model building:
 
 We illustrate the tips for compiling these packages below. 
 
-===================================================================
+## How to install these packages? 
 ### 1. distmesh
 It is a matlab code with c++ mex and no compilation required.
 
