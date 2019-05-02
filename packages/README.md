@@ -1,12 +1,44 @@
 ##  External packages
 Here are four packages that are used for model building:  
 1. [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson.   
+~~~
+@article{persson2004simple,
+	title={A simple mesh generator in {MATLAB}},
+	author={Persson, Per-Olof and Strang, Gilbert},
+	journal={SIAM review},
+	volume={46},
+	number={2},
+	pages={329--345},
+	year={2004},
+	publisher={SIAM}
+}
+~~~
 2. [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas.    
+~~~
+@misc{gimbutas2011fmmlib3d,
+	title={{FMMLIB3D 1.2, FORTRAN libraries for fast multiple method in three dimensions}},
+	author={Gimbutas, Z and Greengard, L},
+	year={2011}
+}
+~~~
 3. [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker.  
 4. [TetGen](http://www.tetgen.org) by Hang Si.
+~~~
+@article{si2015tetgen,
+	title={{TetGen, a Delaunay-based quality tetrahedral mesh generator}},
+	author={Si, Hang},
+	journal={ACM Transactions on Mathematical Software (TOMS)},
+	volume={41},
+	number={2},
+	pages={11},
+	year={2015},
+	publisher={ACM}
+}
+~~~
 
 We illustrate the tips for compiling these packages below. 
 
+===================================================================
 ### 1. distmesh
 It is a matlab code with c++ mex and no compilation required.
 
@@ -48,35 +80,4 @@ It is a matlab code and no compilation required.
 cd packages/tetgen1.5.0; make
 ~~~
 
-### References 
-~~~
-@article{persson2004simple,
-	title={A simple mesh generator in {MATLAB}},
-	author={Persson, Per-Olof and Strang, Gilbert},
-	journal={SIAM review},
-	volume={46},
-	number={2},
-	pages={329--345},
-	year={2004},
-	publisher={SIAM}
-}
-~~~
-~~~
-@article{si2015tetgen,
-	title={{TetGen, a Delaunay-based quality tetrahedral mesh generator}},
-	author={Si, Hang},
-	journal={ACM Transactions on Mathematical Software (TOMS)},
-	volume={41},
-	number={2},
-	pages={11},
-	year={2015},
-	publisher={ACM}
-}
-~~~
-~~~
-@misc{gimbutas2011fmmlib3d,
-	title={{FMMLIB3D 1.2, FORTRAN libraries for fast multiple method in three dimensions}},
-	author={Gimbutas, Z and Greengard, L},
-	year={2011}
-}
-~~~
+
