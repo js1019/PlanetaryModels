@@ -1,11 +1,29 @@
 Planetary Model Builder 
 ================================================================
 This repository provides codes to build a planetary model on a deformable tetrahedal mesh
-as well as its reference gravity. It supports the repository for [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
+as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
 
 In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
+
+Contents
+----------------------------------------------------------------
+- **bin**: a script to run the matlab scripts in the demos/; 
+
+- **demos**: scripts to build 3D planetary models; 
+
+- **figs**: figures and animation of different planetary models; 
+
+- **modelbuilder**: scripts to build finite-element matrices and other information;
+
+- **packages**: external packages to build the mesh, compute the reference gravity and visual the results; 
+
+- **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
+
+- **unitspheres**: scripts to build discontinuities using fully unstructured triangles as well as some pre-computed results; 
+
+- **visual**: scripts to visualize the results. 
 
 How to make it work for you? 
 ----------------------------------------------------------------
@@ -14,7 +32,7 @@ This repository uses several packages, including
 + [distmesh](http://persson.berkeley.edu/distmesh/) by Per-Olof Persson;  
 + [several MATLAB scripts](https://github.com/tcew/nodal-dg) from Hesthaven & Warburton's book 'Nodal Discontinuous Galerkin Methods'; 
 + [fmmlib3d](https://github.com/zgimbutas/fmmlib3d) from Leslie Greengard and Zydrunas Gimbutas;  
-+ [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker. 
++ [a MATLAB script](https://www.mathworks.com/matlabcentral/fileexchange/58002-write-binary-vtk-file-for-tetrahedral-grid-with-scalar-and-vector-data?s_tid=prof_contriblnk) for vtk users by Shawn Walker; 
 
 We've put most of the original codes under different folders 
 with some minor changes for this application.
@@ -75,6 +93,7 @@ The repository provides scripts to generate planetary models for [our SuperCompu
   organization={ACM/IEEE}
 }
 ~~~
+Other related references can be found in modelbuilder/, packages/, radialmodels/ and  unitspheres/. 
 
 
 Report
