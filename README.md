@@ -56,10 +56,15 @@ the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)), Gravity
 the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
 Please see unitspheres/ for more details. 
 
+
+### Illustration of other terrestrial planets
+<img src="figs/M6Ltopo1M_visual.png" width="283"/> <img src="figs/Mars_topo94k_axis.png" width="283"/><img src="figs/MDWAK200k_vs.png" width="283"/>
+Here, we show a Moon shear wave speed model in the top right figure, the Mars topography in the top middle figure and a Mars shear wave speed model in the top right figure. These models can be reproduced by the scripts provided in the demos. 
+
 ### A few remarks
-+ If the reference gravity is **not** needed, you do **not** have to run Gravity.
++ If the reference gravity is **NOT** needed, you do **NOT** have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
-+ We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk files**). 
++ We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
 + To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
 + To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize **surface distance functions** to build your own meshes.  
 
