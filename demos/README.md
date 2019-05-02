@@ -7,6 +7,8 @@ Four model generators are provided:
 + Moon: a radial Moon model from [Weber et al., 2011](https://science.sciencemag.org/content/331/6015/309) with its 3D crust; 
 + RT_MarsDWAK: a radial Mars from [Khan et al., 2016](https://www.sciencedirect.com/science/article/pii/S0031920116300875) model with its 3D crust as well as its centrfugal acceleration due to its rotation; 
 
+The discontinuities (surfaces and fluid-solid boundaries) are pre-computed. The data are stored in ../unitspheres/. You can use the scripts under folders in ../unitspheres/ to create your own discontinuities. 
+
 ### Building similar models with various degrees of freedom 
 Prior to build a planetary model, we utilize a radial model that is stored in ../../radialmodels/prem3L_noocean.mat. 
 Here, I use CONST/CONST_mesh.m as an example. You will need to set the path to you mesh and model with its name 
@@ -52,5 +54,5 @@ It will not affect the computation. You can then run
 run Gravity
 ~~~
 If you want compute the reference gravity for a huge model, the memory consumption may be an issue. 
-You may need to split many bodies into several small groups and compute the interactions between them. 
+You may need to split many bodies into several small groups and compute the interactions among them. 
 
