@@ -17,7 +17,7 @@ Contents
 
 - **modelbuilder**: scripts to build finite-element matrices and other information;
 
-- **packages**: external packages to build the mesh, compute the reference gravity and visual the modeling results; 
+- **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
 
 - **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
 
