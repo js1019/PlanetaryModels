@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-This repository provides codes to build a planetary model on a deformable tetrahedal mesh
+This repository provides scripts to build a planetary model on a deformable tetrahedal mesh
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
@@ -17,13 +17,13 @@ Contents
 
 - **modelbuilder**: scripts to build finite-element matrices and other information;
 
-- **packages**: external packages to build the mesh, compute the reference gravity and visual the results; 
+- **packages**: external packages to build the mesh, compute the reference gravity and visual the modeling results; 
 
 - **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
 
 - **unitspheres**: scripts to build discontinuities using fully unstructured triangles as well as some pre-computed results; 
 
-- **visual**: scripts to visualize the results. 
+- **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
 How to make it work for you? 
 ----------------------------------------------------------------
@@ -39,7 +39,7 @@ with some minor changes for this application.
 
 
 You may follow the README.md under packages to compile what you need. 
-If you only need to build a tetrahedral mesh, please compile tetgen; if you are a Linux user, just go to packages/tetgen1.5.0 and type make. If you need to compute the reference gravity, please check the readme under packages/ and compile packages/fmmlib3d-1.2.  
+If you only need to build a tetrahedral mesh, please compile TetGen; if you are a Linux user, just go to packages/tetgen1.5.0 and type make. If you need to compute the reference gravity, please check the readme under packages/ and compile packages/fmmlib3d-1.2.  
 
 
 Build your planetary models
@@ -64,7 +64,7 @@ Here, we show a Moon shear wave speed model in the top right figure, the Mars to
 ### A few remarks
 + If the reference gravity is **NOT** needed, you do **NOT** have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
-+ We use [Paraview](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
++ We use [ParaView](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
 + To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
 + To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize **surface distance functions** to build your own meshes.  
 
@@ -103,4 +103,4 @@ Other related references can be found in modelbuilder/, packages/, radialmodels/
 
 Report
 -----------------------------------------------------------------
-Please let us know any issues of this repository. 
+Please let us know any issues of this repository. Contributions are welcome. 
