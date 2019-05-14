@@ -9,21 +9,14 @@ In the above figures, examples of compressional and shear wave speed models of o
 
 Contents
 ----------------------------------------------------------------
-- **bin**: a script to run the Matlab scripts in the demos/; 
-
-- **demos**: scripts to build 3D planetary models; 
-
-- **figs**: figures and animation of different planetary models; 
-
-- **modelbuilder**: scripts to build finite-element matrices and other information;
-
-- **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
-
-- **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
-
-- **unitspheres**: scripts to build discontinuities using fully unstructured triangles as well as some pre-computed results; 
-
-- **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
++ **bin**: a script to run the Matlab scripts in the demos/; 
++ **demos**: scripts to build 3D planetary models; 
++ **figs**: figures and animation of different planetary models; 
++ **modelbuilder**: scripts to build finite-element matrices and other information;
++ **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
++ **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
++ **unitspheres**: scripts to build discontinuities using fully unstructured triangles as well as some pre-computed results; 
++ **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
 How to make it work for you? 
 ----------------------------------------------------------------
