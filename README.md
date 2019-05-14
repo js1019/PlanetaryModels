@@ -15,7 +15,7 @@ Contents
 + **modelbuilder**: scripts to build finite-element matrices and other information;
 + **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
 + **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
-+ **unitspheres**: scripts to build discontinuities using fully unstructured triangles as well as some pre-computed results; 
++ **unitspheres**: scripts to build discontinuities using unstructured triangles as well as some precomputed meshes; 
 + **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
 How to make it work for you? 
