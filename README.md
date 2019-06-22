@@ -3,8 +3,9 @@ Planetary Model Builder
 This repository provides scripts to build a planetary model on a deformable tetrahedal mesh
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
-<img src="figs/PREM_vp.gif" width="425"/> <img src="figs/PREM_vs.gif" width="425"/>
-
+<p align="center">
+   <img src="figs/PREM_vp.gif" width="375"/> <img src="figs/PREM_vs.gif" width="375"/>
+</p>
 In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
 
 Contents
@@ -69,7 +70,9 @@ Please check visual/README.md for more details.
 Furthermore
 ------------------------------------------------------------------
 You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its demos](http://persson.berkeley.edu/distmesh/).  
-<img src="figs/CMI_94k-eps.png" width="425"/> <img src="figs/MIT4M_vp-eps.png" width="425"/>
+<p align="center">
+<img src="figs/CMI_94k-eps.png" width="375"/> <img src="figs/MIT4M_vp-eps.png" width="375"/>
+</p>
 
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
 and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.
