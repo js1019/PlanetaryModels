@@ -5,7 +5,7 @@ addpath('../../packages/fmmlib3d-1.2/matlab/');
 
 fmesh = 'output/Mtopo100k/Mtopo_6L_100k';
 
-load ../../radialmodels/Moon6L_gravity.mat
+load ../../radialmodels/moon/Moon6L_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
 

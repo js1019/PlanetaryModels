@@ -34,7 +34,7 @@ a = 1.2e8; % 3k7 8k
 
 tic
 % load radial information
-load ../../radialmodels/marsDWAK_3L_gravity.mat
+load ../../radialmodels/mars/marsDWAK_3L_gravity.mat
 
 % radius 
 R1 = RD(3,1); R2 = RD(2,1); 

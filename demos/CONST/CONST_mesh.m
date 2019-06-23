@@ -29,7 +29,7 @@ a = 5e8; %392 3k
 
 
 % load radial information
-load ../../radialmodels/prem3L_noocean.mat
+load ../../radialmodels/PREM/prem3L_noocean.mat
 
 
 % radius 

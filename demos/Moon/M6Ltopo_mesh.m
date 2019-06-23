@@ -6,7 +6,7 @@ tetgen = '../../packages/tetgen1.5.0/tetgen';
 
 tic
 % load radial information
-load ../../radialmodels/Moon6L.mat; MI(:,2:4) = MI(:,2:4)/1e3;
+load ../../radialmodels/moon/Moon6L.mat; MI(:,2:4) = MI(:,2:4)/1e3;
 
 pOrder  = 1;
 

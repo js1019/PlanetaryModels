@@ -6,8 +6,8 @@ addpath('../../packages/fmmlib3d-1.2/matlab/');
 fmesh = 'output/CONST3k/CONST_1L_3k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
 
-load ../../radialmodels/CONST_gravity.mat
-%load ../radialmodels/prem3L_noocean_gravity.mat
+load ../../radialmodels/PREM/CONST_gravity.mat
+%load ../radialmodels/PREM/prem3L_noocean_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
 

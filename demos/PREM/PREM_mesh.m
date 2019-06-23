@@ -29,7 +29,7 @@ a = 8e10; % 396 3k
 
 tic
 % load radial information
-load ../../radialmodels/prem3L_noocean.mat
+load ../../radialmodels/PREM/prem3L_noocean.mat
 
 % radius 
 R1 = RD(1,1); R2 = RD(2,1); R3 = RD(3,1);

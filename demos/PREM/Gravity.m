@@ -6,13 +6,13 @@ addpath('../../packages/fmmlib3d-1.2/matlab/');
 fmesh = 'output/PREM3k/prem_3L_3k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
 
-load ../../radialmodels/CONST_gravity.mat
-%load ../radialmodels/prem3L_noocean_gravity.mat
+%load ../../radialmodels/PREM/CONST_gravity.mat
+load ../../radialmodels/PREM/prem3L_noocean_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
 
 % finite element order (choose 1 or 2)
-pOrder  = 1;
+pOrder  = 2;
 
 scaling = 6.371*10^3;
 

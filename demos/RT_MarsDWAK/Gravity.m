@@ -4,7 +4,7 @@ addpath('../../packages/fmmlib3d-1.2/matlab/');
 
 fmesh  = 'output/RTMDWAK8k/RTMDWAK_3L_8k';
 
-load ../../radialmodels/marsDWAK_3L_gravity.mat
+load ../../radialmodels/mars/marsDWAK_3L_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
 
