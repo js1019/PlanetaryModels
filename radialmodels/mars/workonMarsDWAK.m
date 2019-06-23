@@ -1,6 +1,6 @@
 % work on a Mars model
 clear all; clc; 
-fname = 'models1D/Mars_DWAK_noheader.bm';
+fname = '../models1D/Mars_DWAK_noheader.bm';
 M0 = load(fname); 
 
 % construct an isotropic file with land only

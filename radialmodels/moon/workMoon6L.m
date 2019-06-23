@@ -1,7 +1,7 @@
 % deal with Weber model
 clear all; clc; 
 
-fname = 'models1D/moon_weber2011.txt';
+fname = '../models1D/moon_weber2011.txt';
 % Columns from left to right represent 
 % radius,depth,density,Vpv,Vph,Vsv,Vsh,eta,Q-mu,Q-kappa
 M = load(fname);

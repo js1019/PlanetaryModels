@@ -1,7 +1,7 @@
 % deal with PREM data
 clear all; clc; 
 
-fname = 'models1D/PREM_1s.csv';
+fname = '../models1D/PREM_1s.csv';
 % Columns from left to right represent 
 % radius,depth,density,Vpv,Vph,Vsv,Vsh,eta,Q-mu,Q-kappa
 M = csvread(fname);
