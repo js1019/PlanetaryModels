@@ -57,12 +57,12 @@ load ../../unitspheres/MarsCrust/workdata/Marscmi_440.mat
 p2 = p; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-%load ../../unitspheres/MarsEllp/ESurf589/MarsEllp23580.mat
-%load ../../unitspheres/MarsEllp/ESurf589/MarsEllp14904.mat
-%load ../../unitspheres/MarsEllp/ESurf589/MarsEllp5892.mat
-%load ../../unitspheres/MarsEllp/ESurf589/MarsEllp3656.mat
-%load ../../unitspheres/MarsEllp/ESurf589/MarsEllp392.mat
-load ../../unitspheres/MarsEllp/ESurf589/MarsEllp260.mat
+%load ../../unitspheres/MarsEllp/MSurf589/MarsEllp23580.mat
+%load ../../unitspheres/MarsEllp/MSurf589/MarsEllp14904.mat
+%load ../../unitspheres/MarsEllp/MSurf589/MarsEllp5892.mat
+%load ../../unitspheres/MarsEllp/MSurf589/MarsEllp3656.mat
+%load ../../unitspheres/MarsEllp/MSurf589/MarsEllp392.mat
+load ../../unitspheres/MarsEllp/MSurf589/MarsEllp260.mat
 p3 = p*R2/nthroot(1-589e-5,3); % change it!!
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
