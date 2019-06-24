@@ -12,7 +12,7 @@ tic
 [p,t]=distmeshsurface(fd,@huniform,surf_d,1.1*[-1,-1,-1;1,1,1]);
 toc
 
-fname = ['EarthEllp',num2str(size(t,1)),'.mat'];
+fname = ['ESurf335/EarthEllp',num2str(size(t,1)),'.mat'];
 save(fname,'Ellp','fd','p','surf_d','t');
 
 % for reproducing

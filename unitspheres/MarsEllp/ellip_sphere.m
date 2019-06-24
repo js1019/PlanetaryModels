@@ -7,12 +7,12 @@ Ellp = 589e-5;
 %fd=@(p) dsphere(p,0,0,0,1);
 fd=@(p) p(:,1).^2+p(:,2).^2+p(:,3).^2/(1.-Ellp)^2-1;
 
-surf_d = 0.04; 
+surf_d = 0.36; 
 tic
 [p,t]=distmeshsurface(fd,@huniform,surf_d,1.1*[-1,-1,-1;1,1,1]);
 toc
 
-fname = ['MarsEllp',num2str(size(t,1)),'.mat'];
+fname = ['ESurf589/MarsEllp',num2str(size(t,1)),'.mat'];
 save(fname,'Ellp','fd','p','surf_d','t');
 
 % for reproducing
