@@ -62,7 +62,8 @@ while 1
     bars=unique(sort(bars,2),'rows');                % Bars as node pairs
     % 5. Graphical output of the current mesh
     clf,patch('faces',t,'vertices',p,'facecol',[.8,.9,1],'edgecol','k');
-    axis equal;axis off;view(3);cameramenu;drawnow
+    axis equal;axis off;
+    view(3);cameratoolbar;drawnow
   end
 
   % 6. Move mesh points based on bar lengths L and forces F
