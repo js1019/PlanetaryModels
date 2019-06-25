@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-<img src="https://img.shields.io/github/issues/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/forks/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/stars/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/license/js1019/PlanetaryModels.svg">
+<img src="https://img.shields.io/github/downloads/js1019/PlanetaryModels/total.svg"> <img src="https://img.shields.io/github/issues/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/forks/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/stars/js1019/PlanetaryModels.svg"> <img src="https://img.shields.io/github/license/js1019/PlanetaryModels.svg">
 
 This repository provides scripts to build a planetary model on a deformable tetrahedal mesh
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
