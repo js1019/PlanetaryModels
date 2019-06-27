@@ -1,6 +1,6 @@
 Planetary Model Builder 
 ================================================================
-<img src="https://img.shields.io/github/downloads/js1019/PlanetaryModels/total.svg?style=social"> <img src="https://img.shields.io/github/languages/code-size/js1019/PlanetaryModels.svg?style=social"><img src="https://img.shields.io/github/issues/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/forks/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/stars/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/license/js1019/PlanetaryModels.svg?style=social">
+<img src="https://img.shields.io/github/languages/code-size/js1019/PlanetaryModels.svg?style=social"><img src="https://img.shields.io/github/issues/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/forks/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/stars/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/license/js1019/PlanetaryModels.svg?style=social">
 
 This repository provides scripts to build a planetary model on a deformable tetrahedal mesh
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
@@ -85,7 +85,6 @@ If you would like to reproduce these models, you may need to download the model 
 Reference
 -------------------------------------------------------------------
 The repository provides scripts to generate planetary models for [our SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
-
 ~~~
 @inproceedings{shi2018computing,
   title={Computing planetary interior normal modes with a highly parallel polynomial filtering eigensolver},
@@ -96,6 +95,18 @@ The repository provides scripts to generate planetary models for [our SuperCompu
   organization={ACM/IEEE}
 }
 ~~~
+
+We also present the theory, discretization, and validation of our work in [this paper](https://arxiv.org/abs/1906.11082) on arXiv. 
+~~~
+@article{shi2019normalmodes
+  title{A Rayleigh-Ritz method based approach to computing seismic normal modes in the presence of an essential spectrum},
+  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V},
+  journal={arXiv preprint arXiv:1906.11082},
+  year={2019}
+}
+~~~
+
+
 Other related references can be found in modelbuilder/, packages/, radialmodels/ and  unitspheres/. 
 
 
