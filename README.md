@@ -6,7 +6,7 @@ This repository provides scripts to build a planetary model on a deformable tetr
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <p align="center">
-   <img src="figs/PREM_vp.gif" width="375"/> <img src="figs/PREM_vs.gif" width="375"/>
+   <img src="figs/PREM_vp.gif" width="400"/> <img src="figs/PREM_vs.gif" width="400"/>
 </p>
 In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
 
