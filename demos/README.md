@@ -54,5 +54,7 @@ It will not affect the computation. You can then run
 run Gravity
 ~~~
 If you want to compute the reference gravity for a huge model, the memory consumption may be an issue. 
-You may need to split many bodies into several small groups and compute the interactions among them. 
+You may need to split many bodies into several small groups and compute the interactions among them, 
+please see GravityETC/gravity.m for a simple implementation to reduce the memory costs. 
 
+Under GravityETC, the effects of centrifugal force due to rotation are included as well. 
