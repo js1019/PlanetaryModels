@@ -12,13 +12,13 @@ In the above figures, examples of compressional and shear wave speed models of o
 
 Contents
 ----------------------------------------------------------------
-+ **bin**: a script to run the Matlab scripts in the demos/; 
-+ **demos**: scripts to build 3D planetary models; 
++ **Demos**: scripts to build 3D planetary models; 
++ **bin**: a script to run the Matlab scripts in the Demos/; 
 + **figs**: figures and animation of different planetary models; 
 + **modelbuilder**: scripts to build finite-element matrices and other information;
 + **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
 + **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
-+ **unitspheres**: scripts to build discontinuities using unstructured triangles as well as some precomputed meshes; 
++ **discontinuities**: scripts to build discontinuities using unstructured triangles as well as some precomputed meshes; 
 + **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
 
 How to make it work for you? 
@@ -40,8 +40,8 @@ If you only need to build a tetrahedral mesh, please compile TetGen; if you are 
 
 Build your planetary models
 -----------------------------------------------------------------
-Please check the scripts under demos/CONST for a constant ball model, demos/PREM 
-for a standard Earth model, demos/Moon for a Moon model and demos/RT_MarsDWAK for a Mars model. 
+Please check the scripts under Demos/CONST for a constant ball model, Demos/PREM 
+for a standard Earth model, Demos/Moon for a Moon model and Demos/RT_MarsDWAK for a Mars model. 
 Under these folders, you may run 
 ~~~ 
 run {CONST/PREM/M6Ltopo/MarsDWAK}_mesh; run Gravity;
@@ -50,19 +50,19 @@ to obtain the model and its reference gravity.
 Note that the 3D crusts used in this work are based on the results of several NASA missions, including 
 the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)), Gravity Recovery and Interior Laboratory ([GRAIL](https://www.nasa.gov/mission_pages/grail/main/index.html)) and 
 the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
-Please see unitspheres/ for more details. 
+Please see discontinuities/ for more details. 
 
 
 ### Illustration of other terrestrial planets
 <img src="figs/M6Ltopo1M_visual.png" width="283"/> <img src="figs/Mars_topo94k_axis.png" width="283"/><img src="figs/MDWAK200k_vs.png" width="283"/>
-Here, we show a Moon shear wave speed model in the top right figure, the Mars topography in the top middle figure and a Mars shear wave speed model in the top right figure. These models can be reproduced by the scripts provided in the demos. 
+Here, we show a Moon shear wave speed model in the top right figure, the Mars topography in the top middle figure and a Mars shear wave speed model in the top right figure. These models can be reproduced by the scripts provided in the Demos. 
 
 ### A few remarks
 + If the reference gravity is **NOT** needed, you do **NOT** have to run Gravity.
 + Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 + We use [ParaView](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
 + To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
-+ To insert discontinuities, such as topography, interior boundaries, please check the folder unitspheres/ and utilize **surface distance functions** to build your own meshes.  
++ To insert discontinuities, such as topography, interior boundaries, please check the folder discontinuities/ and utilize **surface distance functions** to build your own meshes.  
 
 Postprocess
 ------------------------------------------------------------------
@@ -71,7 +71,7 @@ Please check visual/README.md for more details.
 
 Furthermore
 ------------------------------------------------------------------
-You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its demos](http://persson.berkeley.edu/distmesh/).  
+You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its Demos](http://persson.berkeley.edu/distmesh/).  
 <p align="center">
 <img src="figs/CMI_94k-eps.png" width="375"/> <img src="figs/MIT4M_vp-eps.png" width="375"/>
 </p>
@@ -107,7 +107,7 @@ We also present the theory, discretization, and validation of our work in [this 
 ~~~
 
 
-Other related references can be found in modelbuilder/, packages/, radialmodels/ and  unitspheres/. 
+Other related references can be found in modelbuilder/, packages/, radialmodels/ and  discontinuities/. 
 
 
 Report
