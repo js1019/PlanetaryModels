@@ -36,7 +36,7 @@ load ../../radialmodels/PREM/prem3L_noocean.mat
 R1 = RD(1,1); 
 
 % load unit spheres
-load ../../unitspheres/data/Sph392.mat
+load ../../Discontinuities/data/Sph392.mat
 
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);

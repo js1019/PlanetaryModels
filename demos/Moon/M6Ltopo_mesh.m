@@ -19,40 +19,29 @@ fnde = [fmesh,'.1_node.dat'];
 R1 = RD(2,1); R2 = RD(3,1); R3 = RD(4,1);
 R4 = RD(5,1); R5 = RD(6,1); R6 = RD(7,1);
 
-load ../../unitspheres/data/Sph956.mat
+load ../../Discontinuities/data/Sph956.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
-load ../../unitspheres/data/Sph956.mat
+load ../../Discontinuities/data/Sph956.mat
 p2 = p*R2; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-load ../../unitspheres/data/Sph3k6.mat
+load ../../Discontinuities/data/Sph3k6.mat
 p3 = p*R3; 
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
-load ../../unitspheres/data/Sph6k.mat
+load ../../Discontinuities/data/Sph6k.mat
 p4 = p*R4; 
 np4 = size(p4,1); t4 = t + np1 + np2 +np3; nt4 = size(t4,1);
 
-%load ../unitspheres/data/Sph3k6.mat
-load ../../unitspheres/mooncrust/workdata/Mcmi1_6k.mat
-%load ../../dealwithdata/Moon06CMI20_10k.mat
-%load ../../dealwithdata/Moon03CMI60_40k.mat
-%load ../unitspheres/mooncrust/Moon02CMI150_90k.mat; 
-%load ../unitspheres/mooncrustv2/Mcmi1_91k.mat; 
-%p5 = p*R5;
+load ../../Discontinuities/mooncrust/workdata/Mcmi1_6k.mat
 p5 = p; 
 np5 = size(p5,1); t5 = t + np1 + np2 +np3 + np4; 
 nt5 = size(t5,1);
 
-%load ../unitspheres/data/Sph6k.mat
-load ../../unitspheres/mooncrust/workdata/Msurf_15k.mat
-%load ../../dealwithdata/Moon04surf40_20k.mat
-%load ../../dealwithdata/Moon03surf60_40k.mat
-%load ../unitspheres/mooncrust/Moon02surf150_94k.mat; 
-%load ../unitspheres/mooncrustv2/Msurf_94k.mat; 
-%p6 = p*R6; 
+
+load ../../Discontinuities/mooncrust/workdata/Msurf_15k.mat
 p6 = p;
 np6 = size(p6,1); t6 = t + np1 + np2 +np3 + np4 + np5; 
 nt6 = size(t6,1);
