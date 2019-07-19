@@ -1,5 +1,6 @@
 ## Demos for model building
-The demos under CONST/, PREM/, Moon/, RT_MarsDWAK contain scripts to create planetary models. You may directly run these demos. 
+The demos under CONST/, PREM/, Moon/, RT_MarsDWAK/ contain scripts to create planetary models. 
+You may directly run these demos. 
 
 Four model generators are provided:
 + CONST: a constant perfectly spherically symmetric pure solid ball has a size of the Earth;
@@ -11,7 +12,7 @@ The discontinuities (surfaces and fluid-solid boundaries) are pre-computed. The 
 
 ### Building similar models with various degrees of freedom 
 Prior to building a planetary model, we utilize a radial model that is stored in ../../radialmodels/prem3L_noocean.mat. 
-Here, I use CONST/CONST_mesh.m as an example. You will need to set the path to your mesh and model with its name 
+Here, we use CONST/CONST_mesh.m as an example. You will need to set the path to your mesh and model with its name 
 ~~~
 fmesh  = './output/CONST3k/CONST_1L_3k'; % note that CONST_1L_3k is the model name. 
 ~~~
@@ -54,7 +55,8 @@ It will not affect the computation. You can then run
 run Gravity
 ~~~
 If you want to compute the reference gravity for a huge model, the memory consumption may be an issue. 
-You may need to split many bodies into several small groups and compute the interactions among them, 
-please see GravityETC/gravity.m for a simple implementation to reduce the memory costs. 
+Please see GravityETC/gravity.m for a simple implementation to reduce the memory costs. 
+We split many bodies into several small groups and compute the interactions among them. 
 
-Under GravityETC, the effects of centrifugal force due to rotation are included as well. 
+Under GravityETC/, the effects of centrifugal force due to rotation are included as well. Please edit the 
+period (in hours) for the target star. 
