@@ -2,8 +2,8 @@
 clear all; clc; tic
 addpath('../../packages/fmmlib3d-1.2/matlab/');
 
+% -------------------- parameter setting --------------------------
 fmesh  = '/local/js116/NMmodels/M0topo/input/M0topo200k/M0topo_3L_200k';
-
 load ../../radialmodels/mars/marsDWAK_3L_gravity.mat
 %saveFMM = false; 
 saveFMM = true;
@@ -11,12 +11,11 @@ saveFMM = true;
 % finite element order (choose 1 or 2)
 pOrder  = 1;
 scaling = 3389.5;
-
 % memory control
 Gpsiz = 1000000;
+% --------------------------------------------------------------------
 
 [pout,tout,~,at] = read_mesh3d([fmesh,'.1']);
-
 
 fmid    = ['_pod_',int2str(pOrder),'_'];
 % true model filenames

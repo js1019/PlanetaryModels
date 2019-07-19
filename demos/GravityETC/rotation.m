@@ -1,7 +1,7 @@
 % construct the rotation and centrifugal force
 
 % set a few parameters
-period = 24.6229; %24*3600+37*60+22; 
+period = 24.6229; %24*3600+37*60+22; hours
 aglar = 2*pi/(period*3600); 
 Omega = [0 0 1]*aglar;
 
