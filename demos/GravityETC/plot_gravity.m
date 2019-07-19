@@ -1,7 +1,7 @@
 % plot gravity comparison
-load ../deal_prem/prem3L_noocean_gravity.mat
+%load ../../radialmodels/PREM/prem3L_noocean_gravity.mat
 
-if 1
+if 0
 figure;
 plot(rnrm,gnrm,'.');
 hold on;
@@ -12,9 +12,11 @@ ylabel('Field (m/s^2)');
 axis square
 end
 
-if 1
+if 0
+% a simple correction
+dif = min(gpot)-min(G*phi);
 figure
-plot(rnrm,gpot,'.');
+plot(rnrm,gpot-dif,'.');
 hold on;
 plot(RI,G*phi,'ko');
 legend('sol. from FMM','semi-analytic sol.','location','southeast')
