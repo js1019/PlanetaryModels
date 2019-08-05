@@ -51,7 +51,7 @@ np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
 
 load ../../discontinuities/MarsEllp/MCMB419/MarsEllp260.mat
-p3 = p*R2/nthroot(1-589e-5,3); % change it!!
+p3 = p*R2/nthroot(1-419e-5,3); % change it!!
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
 istart = 1; iend = np1; 

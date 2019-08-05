@@ -11,7 +11,7 @@ saveFMM = true;
 % finite element order (choose 1 or 2)
 pOrder  = 1;
 
-scaling = 3396;
+scaling = 3389.5;
 
 [pout,tout,~,at] = read_mesh3d([fmesh,'.1']);
 
