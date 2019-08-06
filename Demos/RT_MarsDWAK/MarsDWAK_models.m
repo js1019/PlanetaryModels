@@ -26,11 +26,23 @@ rho0 = zeros(pNp,size(x,2));
 
 for i = 1:nlayer
    tid = find(at==i); 
-   rvd = sqrt(x(:,tid).^2+y(:,tid).^2+z(:,tid).^2);
+   % radius of each element
+   rvd0 = sqrt(x(:,tid).^2+y(:,tid).^2+z(:,tid).^2);
+   % cos^2 \theta
+   cost = z(:,tid).^2./rvd0.^2;   
    
-   ravg = sum(rvd(:))/length(tid)/pNp; 
+   % interp (rvd0,cost)
+   rvdn = interp1(xr,1:nr,rvd0,'pchip');
+   cosn = interp1(co2,1:ny,cost,'pchip');
+   
+   rvd = rvd0; 
+   for k = 1:size(rvdn,1)
+      rvd(k,:) = interp2(1:nr,1:ny, axr',rvdn(k,:),cosn(k,:),'spline');
+   end
+   ravg = sum(rvd0(:))/length(tid)/pNp;
+
    for j = 1:nlayer
-   if (ravg > RD(j,1) && ravg < RD(j+1,1))
+   if (ravg < RD(j+1,1) && ravg > RD(j,1))
       tmpr   = MI(RD(j,2)+1:RD(j+1,2),1);
       tmpvp  = MI(RD(j,2)+1:RD(j+1,2),3);
       vptmp  = interp1(tmpr,tmpvp,rvd,'pchip');
@@ -41,7 +53,13 @@ for i = 1:nlayer
       tmprho  = MI(RD(j,2)+1:RD(j+1,2),2);
       rhotmp  = interp1(tmpr,tmprho,rvd,'pchip');
       rho0(:,tid) = reshape(rhotmp,pNp,length(tid)); 
+      if j == 3
+         vp0(:,tid)  = MI(end,3);
+         vs0(:,tid)  = MI(end,4);
+         rho0(:,tid) = MI(end,2);
+      end
    end
+  
    end
 end
 toc
@@ -65,7 +83,7 @@ rho = rho0(tet');
 if 1
 % setup filename
 filename = fvtk;
-data_title = 'Mars_DWAK';
+data_title = 'M0topo';
 % organize data
 % .type field must be 'scalar' or 'vector'
 % number of vector components must equal dimension of the mesh
