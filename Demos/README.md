@@ -7,6 +7,7 @@ Four model generators are provided:
 + PREM: a standard radial Earth model from [Dziewonski & Anderson 1981](https://www.sciencedirect.com/science/article/pii/0031920181900467); 
 + Moon: a radial Moon model from [Weber et al., 2011](https://science.sciencemag.org/content/331/6015/309) with its 3D crust; 
 + RT_MarsDWAK: a radial Mars from [Khan et al., 2016](https://www.sciencedirect.com/science/article/pii/S0031920116300875) model with its 3D crust as well as its centrifugal acceleration due to its rotation; 
++ **new** ScriptSets: contains several scripts to build various Moon and Mars models.
 
 The discontinuities (surfaces and fluid-solid boundaries) are pre-computed. The data are stored in ../unitspheres/. You can use the scripts under folders in ../unitspheres/ to create your own discontinuities. 
 
@@ -59,4 +60,4 @@ Please see GravityETC/gravity.m for a simple implementation to reduce the memory
 We split many bodies into several small groups and compute the interactions among them. 
 
 Under GravityETC/, the effects of centrifugal force due to rotation are included as well. Please edit the 
-period (in hours) for the target star. 
+period (in hours) for the target planet. 
