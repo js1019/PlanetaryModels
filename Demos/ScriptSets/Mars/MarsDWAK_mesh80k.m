@@ -1,20 +1,18 @@
 % build up an earth model
 clear all; clc;
-addpath('../../modelbuilder/');  
+addpath('../../../modelbuilder/');  
 
-fmesh  = 'output/RTMDWAK8k/RTMDWAK_3L_8k';
-tetgen = '../../packages/tetgen1.5.0/tetgen'; 
-
+%-------------------------------------------------------------
+fmesh  = '/local/js116/NMmodels/GitTests/Mars/Mars80k/Mars_3L_80k'; 
 % finite element order (choose 1 or 2)
 pOrder  = 1;
-
 % set the value to control the degrees of freedom
-a = 1.2e8; % 3k7 8k
+%a = 1.2e8; % 3k7 8k
 %a = 9e9; % 3k7 20k
-%a = 4e9; % 6k 40k
-%a = 3e7; % 10k 80k
+%a = 1.3e7; % 6k 40k
+a = 5.6e6; % 10k 80k
 %a = 6e6; % 15k 120k
-%a = 3.8e6; % 15k 150k
+%a = 3.8e6; % 15k 160k
 %a = 6e6; % 23k 200k
 %a = 7.75e5; % 42k 500k
 %a = 3.7e5; % 42k 1M
@@ -30,27 +28,30 @@ a = 1.2e8; % 3k7 8k
 %a = 5.0e3; % 3077k 400M
 %a = 4.0e3; % 3077k 512M
 %a = 3.0e3; % 3077k 690M
+%------------------------------------------------------
+
+tetgen = '../../../packages/tetgen1.5.0/tetgen'; 
 
 
 tic
 % load radial information
-load ../../radialmodels/mars/marsDWAK_3L_gravity.mat
+load ../../../radialmodels/mars/marsDWAK_3L_gravity.mat
 
 % radius 
 R1 = RD(3,1); R2 = RD(2,1); 
 
 % load unit spheres
-load ../../discontinuities/MarsCrust/workdata/Msurf_3716.mat
+load ../../../discontinuities/MarsCrust/workdata/Msurf_10520.mat
 p1 = p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
 
-load ../../discontinuities/MarsCrust/workdata/Mcmi_440.mat
+load ../../../discontinuities/MarsCrust/workdata/Mcmi_5788.mat
 p2 = p; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
 
-load ../../discontinuities/MarsEllp/MCMB419/MarsEllp260.mat
+load ../../../discontinuities/MarsEllp/MCMB419/MarsEllp5900.mat
 p3 = p*R2/nthroot(1-419e-5,3); % change it!!
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
@@ -99,3 +100,4 @@ toc
 
 
 run MarsDWAK_models
+run Gravity

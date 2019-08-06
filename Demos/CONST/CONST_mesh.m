@@ -10,7 +10,7 @@ tetgen = '../../packages/tetgen1.5.0/tetgen';
 % finite element order (choose 1 or 2)
 pOrder  = 1;
 
-% set the value to contral the degrees of freedom
+% set the value to control the degrees of freedom
 a = 5e8; %392 3k
 %a = 3e8; %392 5k 
 %a = 1.5e8; % 956 10k
