@@ -27,11 +27,11 @@ a = 5e8; % you may play with this value to see the changes.
 Note that a here denotes the maximum volumn of any elements in km^3. The value _a_ controls the total number of the elements. 
 You can then load a unit surface mesh 
 ~~~
-load ../../unitspheres/data/Sph392.mat; % you have other options, see ../../unitspheres/data/. 
+load ../../discontinuities/data/Sph392.mat; % you have other options, see ../../discontinuities/data/. 
 ~~~
 i.e., you may use 
 ~~~
-load ../../unitspheres/data/Sph3k6.mat; or Sph6k, Sph15k, etc.  
+load ../../discontinuities/data/Sph3k6.mat; or Sph6k, Sph15k, etc.  
 ~~~
 The surface mesh provides basic resolution of the surface. You can then simply run 
 ~~~
