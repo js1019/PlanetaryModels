@@ -39,17 +39,17 @@ load ../../radialmodels/ellmars/marsDWAK_3L_ellp_edit.mat
 % radius 
 R1 = RD(3,1); R2 = RD(2,1); 
 
-% load unit spheres
+% load surface mesh
 load ../../discontinuities/MarsCrust/workdata/Msurf_3716.mat
 p1 = p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
-
+% load crust-mantle interface, solid-solid interface
 load ../../discontinuities/MarsCrust/workdata/Mcmi_440.mat
 p2 = p; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
-
+% load core-mantle interface, fluid-solid interface
 load ../../discontinuities/MarsEllp/MCMB419/MarsEllp260.mat
 p3 = p*R2/nthroot(1-419e-5,3); % change it!!
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
