@@ -19,28 +19,33 @@ fnde = [fmesh,'.1_node.dat'];
 R1 = RD(2,1); R2 = RD(3,1); R3 = RD(4,1);
 R4 = RD(5,1); R5 = RD(6,1); R6 = RD(7,1);
 
+% load inner core boundary: fluid-solid interface
 load ../../discontinuities/data/Sph956.mat
 p1 = R1*p;
 np1 = size(p1,1); t1 = t; nt1 = size(t1,1);
 
+% load core-mantle boundary: fluid-solid interface
 load ../../discontinuities/data/Sph956.mat
 p2 = p*R2; 
 np2 = size(p2,1); t2 = t + np1; nt2 = size(t2,1);
 
+% load lower interface of the partial melt layer: solid-solid interface
 load ../../discontinuities/data/Sph3k6.mat
 p3 = p*R3; 
 np3 = size(p3,1); t3 = t + np1 + np2;  nt3 = size(t3,1);
 
+% load upper interface of the partial melt layer: solid-solid interface
 load ../../discontinuities/data/Sph6k.mat
 p4 = p*R4; 
 np4 = size(p4,1); t4 = t + np1 + np2 +np3; nt4 = size(t4,1);
 
+% load crust-mantle interface: solid-solid interface
 load ../../discontinuities/mooncrust/workdata/Mcmi1_6k.mat
 p5 = p; 
 np5 = size(p5,1); t5 = t + np1 + np2 +np3 + np4; 
 nt5 = size(t5,1);
 
-
+% load surface mesh: topography
 load ../../discontinuities/mooncrust/workdata/Msurf_15k.mat
 p6 = p;
 np6 = size(p6,1); t6 = t + np1 + np2 +np3 + np4 + np5; 
