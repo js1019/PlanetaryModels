@@ -2,7 +2,7 @@
 clear all;clc;
 addpath('../modelbuilder/'); 
 
-fmesh  = '../demos/PREM/output/PREM3k/';
+fmesh  = '../Demos/PREM/output/PREM3k/';
 fout   = 'demos/PREM3k/';
 fbase  = 'prem_3L_3k.1';
 fdtail = '0.1000000_1.000000';
