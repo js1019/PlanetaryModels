@@ -2,7 +2,7 @@
 clear all;clc;
 addpath('../modelbuilder/'); 
 
-fmesh  = '../demos/CONST/output/CONST3k/';
+fmesh  = '../Demos/CONST/output/CONST3k/';
 fout   = 'demos/CONST3k/';
 fbase  = 'CONST_1L_3k.1';
 fdtail = '0.00000000_1.00000000';

@@ -8,7 +8,7 @@ You may directly run these two scripts to obtain the vtk files of your normal mo
 If you want to plot other modes, please make sure that you set up the correct paths of different files. 
 The setting provides information about the needed modes 
 ~~~
-fmesh  = '../demos/CONST/output/CONST3k/';
+fmesh  = '../Demos/CONST/output/CONST3k/';
 fout   = 'demos/CONST3k/';
 fbase  = 'CONST_1L_3k.1';
 fdtail = '0.00000000_1.00000000';
