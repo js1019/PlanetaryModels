@@ -20,4 +20,6 @@ nproc denotes the number of processes; nth denotes the n-th modes of the mode co
 It is not difficult to visualize modes using ParaView's vector plots. 
 We recommend readers to follow [this tutorial](http://www.bu.edu/tech/support/research/training-consulting/online-tutorials/paraview/#VECTOR). Please check "Vector Visualization Algorithms". 
 
-Tips: use "Glyph": Scale Mode: "vector"; Reset Scale Factor (to let the arrow sizes represent the vector magnitudes).
+Tips: use "Glyph": play "Scaling" options: "Scale Mode" -> "vector", 
+Reset "Scale Factor" (to let the arrow sizes represent the vector magnitudes); 
+play "Masking" options: set a different "Maximum Number Of Sample Points".
