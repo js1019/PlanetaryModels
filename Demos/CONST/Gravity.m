@@ -1,7 +1,7 @@
 % construct the gravity fields
 clear all; clc; tic
 addpath('../../packages/fmmlib3d-1.2/matlab/');
-
+addpath('../../modelbuilder/');
 
 fmesh = 'output/CONST3k/CONST_1L_3k';
 %fmesh  = '/jia/PNM/PREM/trueG/PREM4M/prem_3L_4M';
