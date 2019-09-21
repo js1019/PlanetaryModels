@@ -59,10 +59,21 @@ for i = 1:6
     v1srf(:,i) = v0srf(ids,i);
 end
 
-for i = -1:K
-   if (isempty(find(v1srf(:,4)==i))) 
+Eid0 = zeros(K+1,1); j = 1;  
+for i = 2:length(v1srf(:,4))
+    if (v1srf(i-1,4)~=v1srf(i,4))
+       j = j + 1;
+       Eid0(j) = i-1; 
+    else
+        
+    end
+end
+
+for i = 1:K
+   if (Eid0(i+1)-Eid0(i)==0) 
    else
-       tmpl = find(v1srf(:,4)==i);
+       tmpl = Eid0(i)+1:Eid0(i+1);
+       %tmpl = find(v1srf(:,4)==i);
        [~,id0] = sort(v1srf(tmpl,5));
        for j = 1:6
            v1srf(tmpl,j) = v1srf(tmpl(id0),j);
