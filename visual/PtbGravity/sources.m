@@ -1,6 +1,7 @@
 % compute values on each element
 
 % read density 
+fname1 = [fmesh,fbase];
 accry = 'float64';
 fmid    = ['_pod_',int2str(N),'_'];
 frho    = [fname1,'_rho',fmid,'true.dat'];

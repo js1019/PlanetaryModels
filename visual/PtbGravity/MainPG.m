@@ -13,9 +13,6 @@ fdtail = '0.1000000_1.000000';
 JOB = 2; pOrder = 2; nproc = 48; nth = 4; 
 Radial = 6.371E3;
 
-% for the density file
-fname0 = '../../Demos/PREM/output/PREM3k/';
-fname1  = [fname0,fbase]; 
 % memory control 
 Gpsiz = 1e7; 
 % scaling scale the total size
@@ -23,14 +20,16 @@ scaling = 6371;
 % end input parameters ------------------
 
 % read eigenvectors
+tic;
 readEigvct; 
 
 % calculate density changes 
 StartUp3D;
 sources;
-
+toc; 
 % compute the PG 
 computePG; 
-
+toc; 
 % visualize the results
 visualPGall;
+toc;
