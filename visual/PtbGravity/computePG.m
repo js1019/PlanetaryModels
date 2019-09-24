@@ -4,9 +4,11 @@ G = 6.6723*10^-5; % gravitational constant
 iprec= 5; %5; 
 nsource = K+lsrf; 
 
-source = [v0elm(:,1:3)' v5srf(:,1:3)'];
+source = [v0elm(:,1:3)' v5srf(:,1:3)']; 
+
+
 ifcharge = 1; 
-charge = [v0elm(:,1)' v5srf(:,6)']; 
+charge = [v0elm(:,4)' v5srf(:,6)']; 
 
 % prepar the targets
 ntarget = size(pxyz,1); 

@@ -57,5 +57,8 @@ eigm1(:,vlist) = eigm00;
 eigm  = eigm1(:,1:nvtx);
 % end of obtaining the eigenvector 
 
+% rescale eigm to meters
+eigm = eigm*1.e3;
+
 % clear 
 clear eigm00 eigm0 eigm1 vsol 

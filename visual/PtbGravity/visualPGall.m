@@ -13,7 +13,7 @@ data_struct(2).name = 'PField';
 data_struct(2).data = real(U.fldtarg(:))*G;
 flipped = false;
 
-stat = vtk_write_tetrahedral_grid_and_data(filename,data_title,pxyz/scaling,...
+stat = vtk_write_tetrahedral_grid_and_data(filename,data_title,pxyz/Radial,...
     EToV,data_struct,flipped);
 
 clear data_struct

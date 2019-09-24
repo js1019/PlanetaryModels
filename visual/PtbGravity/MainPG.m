@@ -15,8 +15,6 @@ Radial = 6.371E3;
 
 % memory control 
 Gpsiz = 1e7; 
-% scaling scale the total size
-scaling = 6371; 
 % end input parameters ------------------
 
 % read eigenvectors

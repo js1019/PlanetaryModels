@@ -36,9 +36,9 @@ for k1 = 1:K
    v0elm(k1,3) = sum(z(:,k1))/4;
    
    for i = 1:4
-      nts = EToV(k1,Fmask(:,i));
-      vsrf = nx(i*3,k1)*eigm(1,nts) + ny(i*3,k1)*eigm(2,nts) +...
-             nz(i*3,k1)*eigm(3,nts);
+      ntsf = EToV(k1,Fmask(:,i));
+      vsrf = nx(i*3,k1)*eigm(1,ntsf) + ny(i*3,k1)*eigm(2,ntsf) +...
+             nz(i*3,k1)*eigm(3,ntsf);
       % values
       v0srf((k1-1)*4+i,6) = v0srf((k1-1)*4+i,6) - ...
               sum(Mass2D*vsrf')*sum(rho1(Fmask(:,i),k1))/3.0*sJ(i*3,k1); 
@@ -46,9 +46,12 @@ for k1 = 1:K
       v0srf((k1-1)*4+i,4) = min(k1,neigh(k1,i));
       v0srf((k1-1)*4+i,5) = max(k1,neigh(k1,i)); 
       % location 
-      v0srf((k1-1)*4+i,1) = sum(x(Fmask(:,i),k1))/3;
-      v0srf((k1-1)*4+i,2) = sum(y(Fmask(:,i),k1))/3;
-      v0srf((k1-1)*4+i,3) = sum(z(Fmask(:,i),k1))/3;
+      %v0srf((k1-1)*4+i,1) = sum(x(Fmask(:,i),k1))/3;
+      %v0srf((k1-1)*4+i,2) = sum(y(Fmask(:,i),k1))/3;
+      %v0srf((k1-1)*4+i,3) = sum(z(Fmask(:,i),k1))/3;
+      v0srf((k1-1)*4+i,1) = sum(pxyz(ntsf,1))/3;
+      v0srf((k1-1)*4+i,2) = sum(pxyz(ntsf,2))/3;
+      v0srf((k1-1)*4+i,3) = sum(pxyz(ntsf,3))/3;
    end
    
 end
@@ -89,8 +92,9 @@ v2srf = v1srf(lsrf0+1:end,:);
 v3srf = (v2srf(1:2:end-1,:)+v2srf(2:2:end,:))/2.0;
 v4srf = [vtsrf;v3srf];
 
-id5 = find(v4srf(:,6)<1e-6); 
+id5 = find(abs(v4srf(:,6))>1e-10); 
 v5srf = v4srf(id5,:);
 lsrf  = size(v5srf,1); 
+%v5srf(:,6) = 0.0;
 
 clear vtsrf v0srf v1srf v2srf v3srf v4srf
