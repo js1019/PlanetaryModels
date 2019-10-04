@@ -98,7 +98,7 @@ The repository provides scripts to generate planetary models for [our SuperCompu
 
 We also present the theory, discretization, and validation of our work in [this paper](https://arxiv.org/abs/1906.11082) on arXiv. 
 ~~~
-@article{shi2019normalmodes
+@article{shi2019normalmodes,
   title{A Rayleigh-Ritz method based approach to computing seismic normal modes in the presence of an essential spectrum},
   author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V},
   journal={arXiv preprint arXiv:1906.11082},
