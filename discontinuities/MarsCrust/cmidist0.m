@@ -1,6 +1,5 @@
 function d = cmidist0(p)
-global cmi0 Re SR
-% transfer to spherical 
+
 global cmi0 Re SR
 % transfer to spherical 
 [azimuth,elevation,r] = cart2sph(p(:,1),p(:,2),p(:,3));
