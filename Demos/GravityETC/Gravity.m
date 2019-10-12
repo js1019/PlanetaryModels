@@ -10,7 +10,8 @@ saveFMM = true;
 
 % finite element order (choose 1 or 2)
 pOrder  = 1;
-scaling = 3389.5;
+% radius of the target planet in km
+scaling = 3389.5; 
 % memory control
 Gpsiz = 1000000;
 % --------------------------------------------------------------------
