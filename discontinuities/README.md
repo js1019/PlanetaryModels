@@ -12,7 +12,7 @@ Please check EarthEllp/ and MarsEllp/ as demos to build ellipsoidal exterior and
 ### Topography and 3D crusts 
 Please check mooncrust/ or Marscrust/ as demos to build a 3D crust, including topography and thickness. 
 The lunar crust model is based on the results of two NASA missions: the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)) and Gravity Recovery and Interior Laboratory ([GRAIL](https://www.nasa.gov/mission_pages/grail/main/index.html)). 
-The Mars crust model is based on the results of the NASA mission, the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
+The Martian crust model is based on the results of the NASA mission, the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
 
 ## Reference 
 Here are some references for modeling the 3D crusts. 
@@ -53,7 +53,7 @@ for [the lunar crust](https://science.sciencemag.org/content/339/6120/671).
   publisher={American Association for the Advancement of Science}
 }
 ~~~
-for [the Mars topography](https://science.sciencemag.org/content/284/5419/1495). 
+for [the Martian topography](https://science.sciencemag.org/content/284/5419/1495). 
 ~~~
 @article{goossens2017evidence,
   title={{Evidence for a low bulk crustal density for Mars from gravity and topography}},
@@ -66,4 +66,4 @@ for [the Mars topography](https://science.sciencemag.org/content/284/5419/1495).
   publisher={Wiley Online Library}
 }
 ~~~
-for [the Mars crust](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL074172). 
+for [the Martian crust](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL074172). 
