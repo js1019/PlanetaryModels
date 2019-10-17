@@ -14,7 +14,7 @@ pOrder  = 1;
 % radius of the target planet in km
 scaling = 3389.5; 
 % memory control
-Gpsiz = 10000000;
+Gpsiz = 1000000;
 % --------------------------------------------------------------------
 
 [pout,tout,~,at] = read_mesh3d([fmesh,'.1']);
@@ -76,6 +76,8 @@ source(1,:) = ones(1,4)*xd/4;
 source(2,:) = ones(1,4)*yd/4;
 source(3,:) = ones(1,4)*zd/4;
 
+%% run rotation 
+run rotation 
 
 ifcharge = 1; 
 charge0 = J(1,:).*sum(Mass*rho0)/pOrder^3;
@@ -188,12 +190,12 @@ end
 if saveFMM % FMM
 % save the data
 fid=fopen(fgfld,'w');
-fwrite(fid,gfld0',accry);
+fwrite(fid,gfld0'+fce1,accry);
 fclose(fid);
 else % semi-analytic
 % save the data
 fid=fopen(fgfld,'w');
-fwrite(fid,gfld1',accry); % first 3 directions; pNp, ntet
+fwrite(fid,gfld1'+fce1,accry); % first 3 directions; pNp, ntet
 fclose(fid);
 end 
 
