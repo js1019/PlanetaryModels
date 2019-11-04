@@ -100,13 +100,17 @@ toc
 dh =[size(tout,1) size(pout,1)];
 fid = fopen(fhed,'w');
 fprintf(fid,'%d %d',dh);
+fclose(fid);
 
 fid=fopen(fele,'w');
 fwrite(fid,tout','int');
+fclose(fid);
 fid=fopen(fngh,'w');
 fwrite(fid,neigh','int');
+fclose(fid);
 fid=fopen(fnde,'w');
 fwrite(fid,pout','float64');
+fclose(fid);
 
 size(tout)
 toc

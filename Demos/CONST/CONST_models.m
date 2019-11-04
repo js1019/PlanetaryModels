@@ -25,6 +25,7 @@ vp0  = zeros(pNp,size(x,2));
 vp0(:) = 10.000;
 fid=fopen(fvp,'w');
 fwrite(fid,vp0(:),accry);
+fclose(fid);
 
 vp = vp0(tet');
 %clear vp
@@ -34,6 +35,7 @@ vs0  = zeros(pNp,size(x,2));
 vs0(:) = 5.7735;
 fid=fopen(fvs,'w');
 fwrite(fid,vs0(:),accry);
+fclose(fid);
 
 vs = vs0(tet');
 %clear vs

@@ -63,15 +63,14 @@ toc
 [pout,tout,~,~,neigh] = read_mesh3d([fmesh,'.1']);
 
 dh =[size(tout,1) size(pout,1)];
-fid = fopen(fhed,'w');
-fprintf(fid,'%d %d',dh);
 
-fid=fopen(fele,'w');
-fwrite(fid,tout','int');
-fid=fopen(fngh,'w');
-fwrite(fid,neigh','int');
-fid=fopen(fnde,'w');
-fwrite(fid,pout','float64');
+fid=fopen(fhed,'w'); fprintf(fid,'%d %d',dh); fclose(fid);
+
+fid=fopen(fele,'w'); fwrite(fid,tout','int'); fclose(fid);
+
+fid=fopen(fngh,'w'); fwrite(fid,neigh','int'); fclose(fid);
+
+fid=fopen(fnde,'w'); fwrite(fid,pout','float64'); fclose(fid);
 
 %vtk_write_general([fmesh,'_face.vtk'],'test',pin,tin);
 toc
