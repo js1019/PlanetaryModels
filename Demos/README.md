@@ -24,7 +24,7 @@ You then set up the value to control the degrees of freedom
 ~~~
 a = 5e8; % you may play with this value to see the changes. 
 ~~~
-Note that a here denotes the maximum volumn of any elements in km^3. The value _a_ controls the total number of the elements. 
+Note that a here denotes the maximum volumn of any elements in km^3. The value _a_ controls the total number of the elements via applying a maximum tetrhedron volume constraint, please see the manual in TetGen. 
 You can then load a unit surface mesh 
 ~~~
 load ../../discontinuities/data/Sph392.mat; % you have other options, see ../../discontinuities/data/. 
@@ -40,7 +40,7 @@ run CONST_mesh
 to obtain both meshes and models. 
 
 ### Computing the reference gravity 
-Once we obtain the mesh and model, we compute the reference gravity, **if needed**, using Fast Multipole Method. 
+Once we obtain the mesh and model, we compute the reference gravity, **if needed**, using the fast multipole method. 
 Similarly, you can set up the path to the model and the finite element polynomial order 
 ~~~
 fmesh  = './output/CONST3k/CONST_1L_3k'; % note that CONST_1L_3k is the model name. 
