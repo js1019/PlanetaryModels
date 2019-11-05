@@ -53,7 +53,6 @@ fid=fopen(fvp,'w');
 fwrite(fid,vp0(:),accry);
 fclose(fid);
 fid=fopen(fvs,'w');
-fclose(fid);
 fwrite(fid,vs0(:),accry);
 fclose(fid);
 fid=fopen(frho,'w');
