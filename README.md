@@ -6,7 +6,7 @@ This repository provides scripts to build a planetary model on a deformable tetr
 as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
 
 <p align="center">
-   <img src="figs/PREM_vp.gif" width="400"/> <img src="figs/PREM_vs.gif" width="400"/>
+   <img src="figs/PREM_vp.gif" width="375"/> <img src="figs/PREM_vs.gif" width="375"/>
 </p>
 In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
 
@@ -54,7 +54,9 @@ Please see discontinuities/ for more details.
 
 
 ### Illustration of other terrestrial planets
-<img src="figs/M6Ltopo1M_visual.png" width="283"/> <img src="figs/Mars_topo94k_axis.png" width="283"/><img src="figs/MDWAK200k_vs.png" width="283"/>
+<p align="center">
+   <img src="figs/M6Ltopo1M_visual.png" width="250"/> <img src="figs/Mars_topo94k_axis.png" width="250"/><img src="figs/MDWAK200k_vs.png" width="250"/>
+</p>   
 Here, we show a Moon shear wave speed model in the top right figure, the Mars topography in the top middle figure and a Mars shear wave speed model in the top right figure. These models can be reproduced by the scripts provided in the Demos. 
 
 ### A few remarks
@@ -73,7 +75,7 @@ Furthermore
 ------------------------------------------------------------------
 You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its Demos](http://persson.berkeley.edu/distmesh/).  
 <p align="center">
-<img src="figs/CMI_94k-eps.png" width="375"/> <img src="figs/MIT4M_vp-eps.png" width="375"/>
+   <img src="figs/CMI_94k-eps.png" width="375"/> <img src="figs/MIT4M_vp-eps.png" width="375"/>
 </p>
 
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
