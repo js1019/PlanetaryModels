@@ -106,7 +106,7 @@ Reference
   year={2020}
 }
 ~~~
-+ The reproducibility and summary of the student cluster competition can be found in [this IEEE TPDS paper](https://ieeexplore.ieee.org/abstract/document/9319555): 
++ The reproducibility, summary and discussion of the student cluster competition results can be found in [this IEEE TPDS paper](https://ieeexplore.ieee.org/abstract/document/9319555): 
 ~~~
 @article{shi2021planetary,
   title={Planetary normal mode computation: Parallel algorithms, performance, and reproducibility},
