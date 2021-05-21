@@ -86,27 +86,40 @@ If you would like to reproduce these models, you may need to download the model 
 
 Reference
 -------------------------------------------------------------------
-The repository provides scripts to generate planetary models for [our SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details. 
++ The repository provides scripts to generate planetary models for [our SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details:
 ~~~
 @inproceedings{shi2018computing,
   title={Computing planetary interior normal modes with a highly parallel polynomial filtering eigensolver},
-  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V},
-  booktitle={Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis, {SC}'18, Dallas, TX, November 11-16, 2018},
-  pages={71:1--71:13},
+  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
+  booktitle={SC18: International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages={894--906},
   year={2018},
-  organization={ACM/IEEE}
+  organization={IEEE}
 }
 ~~~
-
-We also present the theory, discretization, and validation of our work in [this paper](https://arxiv.org/abs/1906.11082) on arXiv. 
++ The theory, discretization and validation of our work are described in [a separate paper](https://arxiv.org/abs/1906.11082) on arXiv: 
 ~~~
-@article{shi2019normalmodes,
-  title{A Rayleigh-Ritz method based approach to computing seismic normal modes in the presence of an essential spectrum},
-  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V},
+@article{shi2020normalmodes,
+  title{A Rayleigh-Ritz-method-based approach to computing seismic normal modes in rotating terrestrial planets},
+  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
   journal={arXiv preprint arXiv:1906.11082},
-  year={2019}
+  year={2020}
 }
 ~~~
++ The reproducibility and summary of the student cluster competition can be found in [this IEEE TPDS paper](https://ieeexplore.ieee.org/abstract/document/9319555): 
+~~~
+@article{shi2021planetary,
+  title={Planetary normal mode computation: Parallel algorithms, performance, and reproducibility},
+  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
+  journal={IEEE Transactions on Parallel and Distributed Systems},
+  volume={32},
+  number={11},
+  pages={2609--2622},
+  year={2021},
+  publisher={IEEE}
+}
+~~~
++ The corresponding Moon and Mars models can be found via [this IEEE data port](https://ieee-dataport.org/documents/mars-and-moon-models-used-reproducibility-challenge-student-cluster-competition-sc19). 
 
 
 Other related references can be found in modelbuilder/, packages/, radialmodels/ and  discontinuities/. 
