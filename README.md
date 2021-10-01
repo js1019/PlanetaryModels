@@ -3,12 +3,13 @@ Planetary Model Builder
 <img src="https://img.shields.io/github/languages/code-size/js1019/PlanetaryModels.svg?style=social"><img src="https://img.shields.io/github/issues/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/forks/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/stars/js1019/PlanetaryModels.svg?style=social"> <img src="https://img.shields.io/github/license/js1019/PlanetaryModels.svg?style=social">
 
 This repository provides scripts to build a planetary model on a deformable tetrahedal mesh
-as well as its reference gravity. It supports and provides input files for the repository of [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).  
+as well as its reference gravity. It supports and provides input files for the repository ["normal mode computation at planetary scales"](https://github.com/js1019/NormalModes).  
 
 <p align="center">
    <img src="figs/PREM_vp.gif" width="375"/> <img src="figs/PREM_vs.gif" width="375"/>
 </p>
-In the above figures, examples of compressional and shear wave speed models of our Earth are illustrated. 
+
+The above are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
 
 Contents
 ----------------------------------------------------------------
@@ -19,7 +20,7 @@ Contents
 + **packages**: external packages to build the mesh, compute the reference gravity and visualize the modeling results; 
 + **radialmodels**: scripts and data that contain information about radial planetary models from the existing literature; 
 + **discontinuities**: scripts to build discontinuities using unstructured triangles as well as some precomputed meshes; 
-+ **visual**: scripts to visualize the normal modes computed from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes).
++ **visual**: scripts to visualize the normal modes computed from the repository ["normal mode computation at planetary scales"](https://github.com/js1019/NormalModes).
 
 How to make it work for you? 
 ----------------------------------------------------------------
@@ -52,74 +53,43 @@ the Lunar Orbiter Laser Altimeter ([LOLA](https://lola.gsfc.nasa.gov/)), Gravity
 the Mars Orbiter Laser Altimeter ([MOLA](https://attic.gsfc.nasa.gov/mola/)). 
 Please see discontinuities/ for more details. 
 
-
 ### Illustration of other terrestrial planets
 <p align="center">
-   <img src="figs/M6Ltopo1M_visual.png" width="250"/> <img src="figs/Mars_topo94k_axis.png" width="250"/><img src="figs/MDWAK200k_vs.png" width="250"/>
+   <img src="figs/M6Ltopo1M_visual.png" width="250"/> <img src="figs/Mars_topo94k_axis.png" width="240"/><img src="figs/MDWAK200k_vs.png" width="240"/>
 </p>   
 Here, we show a Moon shear wave speed model in the top right figure, the Mars topography in the top middle figure and a Mars shear wave speed model in the top right figure. These models can be reproduced by the scripts provided in the Demos. 
 
-### A few remarks
-+ If the reference gravity is **NOT** needed, you do **NOT** have to run Gravity.
-+ Here are two animations for [compressional wave speed of PREM](https://www.youtube.com/watch?v=4AeXhXGClcY) and [shear wave speed of PREM](https://www.youtube.com/watch?v=22yVo2G2e0k). 
-+ We use [ParaView](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
-+ To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
-+ To insert discontinuities, such as topography, interior boundaries, please check the folder discontinuities/ and utilize **surface distance functions** to build your own meshes.  
 
-Postprocess
-------------------------------------------------------------------
-You can use scripts in **visual/** to visualize your computed normal modes from [normal mode computation at planetary scales](https://github.com/js1019/NormalModes). 
-Please check visual/README.md for more details. 
+The corresponding Moon and Mars models can be found via [this IEEE data port](https://ieee-dataport.org/documents/mars-and-moon-models-used-reproducibility-challenge-student-cluster-competition-sc19). 
 
-Furthermore
-------------------------------------------------------------------
+### Include more heterogeneity
 You can build more realistic models using similiar ideas and following the above tips! You may need to understand what distmesh can do. It is quite simple, please see [its Demos](http://persson.berkeley.edu/distmesh/).  
 <p align="center">
-   <img src="figs/CMI_94k-eps.png" width="375"/> <img src="figs/MIT4M_vp-eps.png" width="375"/>
+   <img src="figs/CMI_94k-eps.png" width="350"/> <img src="figs/MIT4M_vp-eps.png" width="350"/>
 </p>
 
 The top right figure illustrates an Earth compressional wave speed model based on [MIT tomographic results](https://pubs.geoscienceworld.org/ssa/srl/article/79/3/384/367688/upper-mantle-heterogeneity-beneath-north-america) (Burdick et al. 2017) 
 and [crust 1.0](https://igppweb.ucsd.edu/~gabi/crust1.html) (Laske et al. 2013). The top left one shows the topography of the Moho discontinuity under Tibetan Plateau.
-If you would like to reproduce these models, you may need to download the model data and make minor changes in the scripts to obtain and visualize your results. 
+If you would like to reproduce these models, you may need to download the model data and make some minor changes in the scripts to obtain and visualize your results. 
+
+
+### A few remarks 
++ We use [ParaView](https://www.paraview.org/) to visualize the results (**vtk or vtu files**). 
++ To design your own models, you may change the settings, including **different discontinuities and model profiles**. 
++ To insert discontinuities, such as topography, interior boundaries, please check the folder discontinuities/ and utilize **surface distance functions** to build your own meshes.  
+
+Postprocess for visualizing the modes
+------------------------------------------------------------------
+You can use scripts in **visual/** to visualize your computed normal modes from the repository ["normal mode computation at planetary scales"](https://github.com/js1019/NormalModes). 
+Please check visual/README.md for more details. 
 
 
 
 Reference
 -------------------------------------------------------------------
-+ The repository provides scripts to generate planetary models for [our SuperComputing (SC'18) paper](https://dl.acm.org/citation.cfm?id=3291751), see below for details:
-~~~
-@inproceedings{shi2018computing,
-  title={Computing planetary interior normal modes with a highly parallel polynomial filtering eigensolver},
-  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
-  booktitle={SC18: International Conference for High Performance Computing, Networking, Storage and Analysis},
-  pages={894--906},
-  year={2018},
-  organization={IEEE}
-}
-~~~
-+ The theory, discretization and validation of our work are described in [a separate paper](https://arxiv.org/abs/1906.11082) on arXiv: 
-~~~
-@article{shi2020normalmodes,
-  title{A Rayleigh-Ritz-method-based approach to computing seismic normal modes in rotating terrestrial planets},
-  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
-  journal={arXiv preprint arXiv:1906.11082},
-  year={2020}
-}
-~~~
-+ The reproducibility, summary and discussion of the student cluster competition results can be found in [this IEEE TPDS paper](https://ieeexplore.ieee.org/abstract/document/9319555): 
-~~~
-@article{shi2021planetary,
-  title={Planetary normal mode computation: Parallel algorithms, performance, and reproducibility},
-  author={Shi, Jia and Li, Ruipeng and Xi, Yuanzhe and Saad, Yousef and de Hoop, Maarten V.},
-  journal={IEEE Transactions on Parallel and Distributed Systems},
-  volume={32},
-  number={11},
-  pages={2609--2622},
-  year={2021},
-  publisher={IEEE}
-}
-~~~
-+ The corresponding Moon and Mars models can be found via [this IEEE data port](https://ieee-dataport.org/documents/mars-and-moon-models-used-reproducibility-challenge-student-cluster-competition-sc19). 
++ _**The theory, discretization and validation:**_ Shi, Jia, Ruipeng Li, Yuanzhe Xi, Yousef Saad, and Maarten V. de Hoop. "A non-perturbative approach to computing seismic normal modes in rotating planets." arXiv preprint arXiv:1906.11082 (2021), [the preprint](https://arxiv.org/abs/1906.11082).
++ _**The reproducibility, summary and discussion of the student cluster competition results:**_ Shi, Jia, Ruipeng Li, Yuanzhe Xi, Yousef Saad, and Maarten V. de Hoop. "Planetary normal mode computation: Parallel algorithms, performance, and reproducibility." IEEE Transactions on Parallel and Distributed Systems, 32, no. 11 (2021): 2609-2622, [the IEEE TPDS paper link](https://ieeexplore.ieee.org/abstract/document/9319555). 
++ _**Parallel performace and algorithm:**_ Shi, Jia, Ruipeng Li, Yuanzhe Xi, Yousef Saad, and Maarten V. de Hoop. "**Computing planetary interior normal modes with a highly parallel polynomial filtering eigensolver.**" In SC18: International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 894-906. IEEE, 2018, [the SC18 paper link](https://dl.acm.org/citation.cfm?id=3291751).
 
 
 Other related references can be found in modelbuilder/, packages/, radialmodels/ and  discontinuities/. 
